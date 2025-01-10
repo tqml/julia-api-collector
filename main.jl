@@ -165,9 +165,9 @@ function extract_functions_from_module(module_)
         end
     end
     method_table = filter(m -> m !== nothing, method_table)
-    
+
     flat_method_table = [m for method in method_table for m in method.ms if m !== nothing]
-    
+
     method_dicts = map(flat_method_table) do m
         temp = method_definition(m)
         tuple_names = (:name, :arg_names, :arg_types, :kwarg_names, :module)
@@ -223,12 +223,11 @@ function extract_functions_from_module(module_)
 end
 
 
-function main() 
+function main()
     for m in (Base, LinearAlgebra, Random, Statistics, Dates, Printf)
         println("Extracting functions from module: ", m)
         extract_functions_from_module(m)
     end
 end
-
 
 main()
