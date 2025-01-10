@@ -1,0 +1,30 @@
+name: Julia
+on:
+  push:
+  pull_request:
+
+jobs:
+  extract_api_docs:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        julia-version:
+          - "1.6"
+          - "1.7"
+          - "1.8"
+          - "1.9"
+          - "1.10"
+          - "1.11"
+
+    steps:
+      - uses: actions/checkout@v4
+      - name: "Set up Julia"
+        uses: julia-actions/setup-julia@v2
+        with:
+          version: ${{ matrix.julia-version }}
+      - run: julia main.jl
+        shell: bash
+      - uses: actions/upload-artifact@v4
+        with:
+          name: my-artifact
+          path: API/Julia ${{ matrix.julia-version }}/Base.txt
