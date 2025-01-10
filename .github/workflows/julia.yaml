@@ -32,9 +32,5 @@ jobs:
         shell: bash
       - uses: actions/upload-artifact@v4
         with:
-          name: base-${{ matrix.julia-version }}.txt
-          path: API/${{ matrix.julia-version }}/Base.txt
-      - uses: actions/upload-artifact@v4
-        with:
-          name: base-${{ matrix.julia-version }}.json
-          path: API/${{ matrix.julia-version }}/Base.json
+          name: api-${{ matrix.julia-version }}
+          path: API/${{ matrix.julia-version }}

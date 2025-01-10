@@ -1,10 +1,10 @@
-using Base
 import Pkg
 Pkg.add("JSON3")
 using JSON3
+using Base, LinearAlgebra, Random, Statistics, Dates, Core, Printf
 # using REPL
 # @edit Base.Docs.doc(sin)
- #Base.Docs.docm(sin)
+#Base.Docs.docm(sin)
 #temp = Base.Docs.doc(sin)
 # Base.Docs.lookup_doc(:sin)
 # REPL.Docs.lookup_doc(:sin)
@@ -78,7 +78,7 @@ function method_definition(@nospecialize m::Method)
     # Get the docs
     #m = Base.Docs.meta(m.module)
     #m_doc = m[Base.Docs.Binding(m.module, m.name)].docs
-    
+
 
     return (
         f_name=f_name,
@@ -139,79 +139,96 @@ function method_show(io::IO, m::Method; include_module::Bool=false)
     end
 end
 
-
-
-
-public_symbols = names(Base)
-x = get_module_functions(Base)
-public_func_names = filter(x -> x in public_symbols, x)
-
-public_methods = map(public_func_names) do x
-    ex = Expr(:., :Base, QuoteNode(x))
-    eval(ex)
+function method_show(m::Method; include_module::Bool=false)
+    io = IOBuffer()
+    method_show(io, m, include_module=include_module)
+    return String(take!(io))
 end
 
-method_table = map(public_methods) do x
-    try
-        methods(x, Base)
-    catch e
-        println("Error with method: ", x)
-        return nothing
+function extract_functions_from_module(module_)
+
+    public_symbols = names(module_)
+    x = get_module_functions(module_)
+    public_func_names = filter(x -> x in public_symbols, x)
+
+    public_methods = map(public_func_names) do x
+        ex = Expr(:., Symbol(string(module_)), QuoteNode(x))
+        eval(ex)
     end
-end;
-method_table = filter(m -> m !== nothing, method_table);
 
-
-flat_method_table = [m for method in method_table for m in method.ms];
-method_dicts = map(flat_method_table) do m
-    temp = method_definition(m)
-    tuple_names = (:name, :arg_names, :arg_types, :kwarg_names, :module)
-    t = NamedTuple{tuple_names}((temp.f_name, temp.arg_names, temp.arg_types, temp.kwargs, temp.module_name))
-    return t
-end;
-
-
-
-
-# %% --------------------------------------------------------
-#        Print the methods to a file
-#------------------------------------------------------------
-
-
-ROOT = abspath(@__DIR__)
-output_dir = joinpath(ROOT, "API", "$(VERSION.major).$(VERSION.minor)")
-mkpath(output_dir)
-output_file = joinpath(output_dir, "Base.txt")
-output_file_json = joinpath(output_dir, "Base.json")
-
-open(output_file_json, "w") do io
-    # TODO doesnt work in JSON ?
-    #X = [escape_quotes(method_dict.name) => method_dict for method_dict in method_dicts]
-    R = (
-        julia=string(VERSION),
-        methods=method_dicts
-    )
-    JSON3.pretty(io, JSON3.write(R))
-end
-
-open(output_file, "w") do io
-    for m in flat_method_table
+    method_table = map(public_methods) do x
         try
-            # f_sig, f_def_module = split(string(m), "@")
-            # f_def_module, _ = split(strip(f_def_module), " ") # remove the source file location
-            # f_out = strip(f_sig) * " " * f_def_module
-            method_show(io, m)
-            println(io)
-            #println(io, f_out)
+            methods(x, module_)
+        catch e
+            println("Error with method: ", x)
+            return nothing
+        end
+    end
+    method_table = filter(m -> m !== nothing, method_table)
+
+
+    flat_method_table = [m for method in method_table for m in method.ms]
+    method_dicts = map(flat_method_table) do m
+        temp = method_definition(m)
+        tuple_names = (:name, :arg_names, :arg_types, :kwarg_names, :module)
+        t = NamedTuple{tuple_names}((temp.f_name, temp.arg_names, temp.arg_types, temp.kwargs, temp.module_name))
+        return t
+    end
+
+
+
+
+    # %% --------------------------------------------------------
+    #        Print the methods to a file
+    #------------------------------------------------------------
+
+
+    ROOT = abspath(@__DIR__)
+    output_dir = joinpath(ROOT, "API", "$(VERSION.major).$(VERSION.minor)")
+    mkpath(output_dir)
+    output_file = joinpath(output_dir, "$(module_).txt")
+    output_file_json = joinpath(output_dir, "$(module_).json")
+
+    open(output_file_json, "w") do io
+        # TODO doesnt work in JSON ?
+        #X = [escape_quotes(method_dict.name) => method_dict for method_dict in method_dicts]
+        R = (
+            julia=string(VERSION),
+            methods=method_dicts
+        )
+        JSON3.pretty(io, JSON3.write(R))
+    end
+
+
+    method_signatures = map(flat_method_table) do m
+        try
+            method_show(m)
         catch e
             if isa(e, InterruptException)
                 println("Interrupted")
                 rethrow(e)
             end
-            println("Error with method: ", method)
-            rethrow(e)
+            println("Error with method: ", m)
+            return nothing
+        end
+    end
+    filter!(x -> x !== nothing, method_signatures)
+    sort!(method_signatures)
+
+    open(output_file, "w") do io
+        for sig in method_signatures
+            println(io, sig)
         end
     end
 end
 
 
+function main() 
+    for m in (Base, LinearAlgebra, Random, Statistics, Dates, Core, Printf)
+        println("Extracting functions from module: ", m)
+        extract_functions_from_module(m)
+    end
+end
+
+
+main()
