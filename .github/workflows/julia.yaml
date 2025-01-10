@@ -27,4 +27,4 @@ jobs:
       - uses: actions/upload-artifact@v4
         with:
           name: my-artifact
-          path: API/Julia ${{ matrix.julia-version }}/Base.txt
+          path: API/${{ matrix.julia-version }}/Base.txt
