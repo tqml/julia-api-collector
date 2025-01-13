@@ -44,8 +44,12 @@ function collect_method_docs(m::Method)
     sig = Base.unwrap_unionall(m.sig)
     sig = Tuple{(s for s in sig.parameters[2:end])...} # Remove method name and create tuple
     method_binding = Base.Docs.Binding(m.module, m.name)
-    doc1 = Base.doc(method_binding, sig)
-    return doc1
+    try
+        doc1 = Base.doc(method_binding, sig)
+        return doc1
+    catch e
+        return nothing
+    end
 end
 
 
@@ -96,14 +100,8 @@ function method_definition(@nospecialize m::Method)
     kwargs = map(Base.sym_to_string, kwargs)
 
     # Get the docs
-    
-    try 
-        doc = collect_method_docs(m)
-    catch e
-        doc = nothing
-    end
-    
-
+    doc = collect_method_docs(m)
+    doc_string = doc === nothing ? "" : string(doc)
 
     return (
         f_name=f_name,
@@ -116,7 +114,7 @@ function method_definition(@nospecialize m::Method)
         line=line,
         sig=sig,
         kwargs=kwargs,
-        doc = string(collect_method_docs(m)),
+        doc=doc_string,
         module_name=string(m.module)
     )
 end
