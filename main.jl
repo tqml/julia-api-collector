@@ -39,6 +39,26 @@ using Base, LinearAlgebra, Random, Statistics, Dates, Core, Printf
 # Base.Docs.signature(temp.tv)
 
 
+function collect_method_docs(m::Method)
+    tv, decls, file, line = Base.arg_decl_parts(m)
+    sig = Base.unwrap_unionall(m.sig)
+    sig = Tuple{(s for s in sig.parameters[2:end])...} # Remove method name and create tuple
+    method_binding = Base.Docs.Binding(m.module, m.name)
+    doc1 = Base.doc(method_binding, sig)
+    return doc1
+end
+
+
+# Base.doc(Base.Docs.Binding(Base, :join), :String)
+
+# s1 = collect_method_docs(methods(open).ms[1])
+# s2 = collect_method_docs(methods(open).ms[4])
+# s1 == s2
+# s1.content[1]
+# s2.content[2]
+# s.content
+# collect_method_docs(methods(open).ms[end])
+
 
 function escape_quotes(s::String)
     return replace(s, "\"" => "\\\"")
@@ -76,8 +96,13 @@ function method_definition(@nospecialize m::Method)
     kwargs = map(Base.sym_to_string, kwargs)
 
     # Get the docs
-    #m = Base.Docs.meta(m.module)
-    #m_doc = m[Base.Docs.Binding(m.module, m.name)].docs
+    
+    try 
+        doc = collect_method_docs(m)
+    catch e
+        doc = nothing
+    end
+    
 
 
     return (
@@ -91,6 +116,7 @@ function method_definition(@nospecialize m::Method)
         line=line,
         sig=sig,
         kwargs=kwargs,
+        doc = string(collect_method_docs(m)),
         module_name=string(m.module)
     )
 end
@@ -170,8 +196,8 @@ function extract_functions_from_module(module_)
 
     method_dicts = map(flat_method_table) do m
         temp = method_definition(m)
-        tuple_names = (:name, :arg_names, :arg_types, :kwarg_names, :module)
-        t = NamedTuple{tuple_names}((temp.f_name, temp.arg_names, temp.arg_types, temp.kwargs, temp.module_name))
+        tuple_names = (:name, :arg_names, :arg_types, :kwarg_names, :module, :doc)
+        t = NamedTuple{tuple_names}((temp.f_name, temp.arg_names, temp.arg_types, temp.kwargs, temp.module_name, temp.doc))
         return t
     end
 

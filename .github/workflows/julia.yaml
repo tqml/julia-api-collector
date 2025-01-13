@@ -11,6 +11,7 @@ concurrency:
 
 jobs:
   extract_api_docs:
+    name: "Extract API docs"
     runs-on: ubuntu-latest
     strategy:
       matrix:
