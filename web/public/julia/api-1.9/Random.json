@@ -1,0 +1,1824 @@
+{
+    "julia": "1.9.4",
+    "methods": [
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "r",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nbitrand([rng=default_rng()], [dims...])\n```\n\nGenerate a `BitArray` of random boolean values.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> bitrand(rng, 10)\n10-element BitVector:\n 0\n 0\n 0\n 0\n 1\n 0\n 0\n 0\n 1\n 1\n```\n"
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "r",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nbitrand([rng=default_rng()], [dims...])\n```\n\nGenerate a `BitArray` of random boolean values.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> bitrand(rng, 10)\n10-element BitVector:\n 0\n 0\n 0\n 0\n 1\n 0\n 0\n 0\n 1\n 1\n```\n"
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nbitrand([rng=default_rng()], [dims...])\n```\n\nGenerate a `BitArray` of random boolean values.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> bitrand(rng, 10)\n10-element BitVector:\n 0\n 0\n 0\n 0\n 1\n 0\n 0\n 0\n 1\n 1\n```\n"
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nbitrand([rng=default_rng()], [dims...])\n```\n\nGenerate a `BitArray` of random boolean values.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> bitrand(rng, 10)\n10-element BitVector:\n 0\n 0\n 0\n 0\n 1\n 0\n 0\n 0\n 1\n 1\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Type{X}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "z",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BigFloat",
+                "Random.SamplerBigFloat{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "x",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BigInt",
+                "Random.SamplerBigInt"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "B",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BitArray",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "AbstractArray{T}",
+                "Type{X}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A",
+                "X"
+            ],
+            "arg_types": [
+                "AbstractArray{T}",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A1",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Bool}",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "AbstractArray{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Bool}",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "AbstractArray{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "Random._GLOBAL_RNG",
+                "Array{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Random.Sampler"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                "X"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrand!([rng=default_rng()], A, [S=eltype(A)])\n```\n\nPopulate the array `A` with random values. If `S` is specified (`S` can be a type or a collection, cf. [`rand`](@ref) for details), the values are picked randomly from `S`. This is equivalent to `copyto!(A, rand(rng, S, size(A)))` but without allocating a new array.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> rand!(rng, zeros(5))\n5-element Vector{Float64}:\n 0.5908446386657102\n 0.7667970365022592\n 0.5662374165061859\n 0.4600853424625171\n 0.7940257103317943\n```\n"
+        },
+        {
+            "name": "randcycle",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "T"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandcycle([rng=default_rng(),] n::Integer)\n```\n\nConstruct a random cyclic permutation of length `n`. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref). The element type of the result is the same as the type of `n`.\n\n!!! compat \"Julia 1.1\"\n    In Julia 1.1 `randcycle` returns a vector `v` with `eltype(v) == typeof(n)` while in Julia 1.0 `eltype(v) == Int`.\n\n\n# Examples\n\n```jldoctest\njulia> randcycle(MersenneTwister(1234), 6)\n6-element Vector{Int64}:\n 3\n 5\n 4\n 6\n 1\n 2\n```\n"
+        },
+        {
+            "name": "randcycle",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandcycle([rng=default_rng(),] n::Integer)\n```\n\nConstruct a random cyclic permutation of length `n`. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref). The element type of the result is the same as the type of `n`.\n\n!!! compat \"Julia 1.1\"\n    In Julia 1.1 `randcycle` returns a vector `v` with `eltype(v) == typeof(n)` while in Julia 1.0 `eltype(v) == Int`.\n\n\n# Examples\n\n```jldoctest\njulia> randcycle(MersenneTwister(1234), 6)\n6-element Vector{Int64}:\n 3\n 5\n 4\n 6\n 1\n 2\n```\n"
+        },
+        {
+            "name": "randcycle!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandcycle!([rng=default_rng(),] A::Array{<:Integer})\n```\n\nConstruct in `A` a random cyclic permutation of length `length(A)`. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> randcycle!(MersenneTwister(1234), Vector{Int}(undef, 6))\n6-element Vector{Int64}:\n 3\n 5\n 4\n 6\n 1\n 2\n```\n"
+        },
+        {
+            "name": "randcycle!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandcycle!([rng=default_rng(),] A::Array{<:Integer})\n```\n\nConstruct in `A` a random cyclic permutation of length `length(A)`. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> randcycle!(MersenneTwister(1234), Vector{Int}(undef, 6))\n6-element Vector{Int64}:\n 3\n 5\n 4\n 6\n 1\n 2\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng"
+            ],
+            "arg_types": [
+                "AbstractRNG"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "T"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Union{Type{Float16}, Type{Float32}, Type{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                ""
+            ],
+            "arg_types": [
+                "Type{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}",
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "",
+                "dim1",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}",
+                "Integer",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "Type{T}",
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "Type{T}",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Tuple{Vararg{Int64, N}} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp([rng=default_rng()], [T=Float64], [dims...])\n```\n\nGenerate a random number of type `T` according to the exponential distribution with scale 1. Optionally generate an array of such random numbers. The `Base` module currently provides an implementation for the types [`Float16`](@ref), [`Float32`](@ref), and [`Float64`](@ref) (the default).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp(rng, Float32)\n2.4835055f0\n\njulia> randexp(rng, 3, 3)\n3×3 Matrix{Float64}:\n 1.5167    1.30652   0.344435\n 0.604436  2.78029   0.418516\n 0.695867  0.693292  0.643644\n```\n"
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with random numbers following the exponential distribution (with scale 1).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp!(rng, zeros(5))\n5-element Vector{Float64}:\n 2.4835053723904896\n 1.516703605376473\n 0.6044364871025417\n 0.6958665886385867\n 1.3065196315496677\n```\n"
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with random numbers following the exponential distribution (with scale 1).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp!(rng, zeros(5))\n5-element Vector{Float64}:\n 2.4835053723904896\n 1.516703605376473\n 0.6044364871025417\n 0.6958665886385867\n 1.3065196315496677\n```\n"
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with random numbers following the exponential distribution (with scale 1).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp!(rng, zeros(5))\n5-element Vector{Float64}:\n 2.4835053723904896\n 1.516703605376473\n 0.6044364871025417\n 0.6958665886385867\n 1.3065196315496677\n```\n"
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandexp!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with random numbers following the exponential distribution (with scale 1).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randexp!(rng, zeros(5))\n5-element Vector{Float64}:\n 2.4835053723904896\n 1.516703605376473\n 0.6044364871025417\n 0.6958665886385867\n 1.3065196315496677\n```\n"
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandn!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with normally-distributed (mean 0, standard deviation 1) random numbers. Also see the [`rand`](@ref) function.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randn!(rng, zeros(5))\n5-element Vector{Float64}:\n  0.8673472019512456\n -0.9017438158568171\n -0.4944787535042339\n -0.9029142938652416\n  0.8644013132535154\n```\n"
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandn!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with normally-distributed (mean 0, standard deviation 1) random numbers. Also see the [`rand`](@ref) function.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randn!(rng, zeros(5))\n5-element Vector{Float64}:\n  0.8673472019512456\n -0.9017438158568171\n -0.4944787535042339\n -0.9029142938652416\n  0.8644013132535154\n```\n"
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandn!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with normally-distributed (mean 0, standard deviation 1) random numbers. Also see the [`rand`](@ref) function.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randn!(rng, zeros(5))\n5-element Vector{Float64}:\n  0.8673472019512456\n -0.9017438158568171\n -0.4944787535042339\n -0.9029142938652416\n  0.8644013132535154\n```\n"
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandn!([rng=default_rng()], A::AbstractArray) -> A\n```\n\nFill the array `A` with normally-distributed (mean 0, standard deviation 1) random numbers. Also see the [`rand`](@ref) function.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randn!(rng, zeros(5))\n5-element Vector{Float64}:\n  0.8673472019512456\n -0.9017438158568171\n -0.4944787535042339\n -0.9029142938652416\n  0.8644013132535154\n```\n"
+        },
+        {
+            "name": "randperm",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "T"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandperm([rng=default_rng(),] n::Integer)\n```\n\nConstruct a random permutation of length `n`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). The element type of the result is the same as the type of `n`.\n\nTo randomly permute an arbitrary vector, see [`shuffle`](@ref) or [`shuffle!`](@ref).\n\n!!! compat \"Julia 1.1\"\n    In Julia 1.1 `randperm` returns a vector `v` with `eltype(v) == typeof(n)` while in Julia 1.0 `eltype(v) == Int`.\n\n\n# Examples\n\n```jldoctest\njulia> randperm(MersenneTwister(1234), 4)\n4-element Vector{Int64}:\n 2\n 1\n 4\n 3\n```\n"
+        },
+        {
+            "name": "randperm",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandperm([rng=default_rng(),] n::Integer)\n```\n\nConstruct a random permutation of length `n`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). The element type of the result is the same as the type of `n`.\n\nTo randomly permute an arbitrary vector, see [`shuffle`](@ref) or [`shuffle!`](@ref).\n\n!!! compat \"Julia 1.1\"\n    In Julia 1.1 `randperm` returns a vector `v` with `eltype(v) == typeof(n)` while in Julia 1.0 `eltype(v) == Int`.\n\n\n# Examples\n\n```jldoctest\njulia> randperm(MersenneTwister(1234), 4)\n4-element Vector{Int64}:\n 2\n 1\n 4\n 3\n```\n"
+        },
+        {
+            "name": "randperm!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandperm!([rng=default_rng(),] A::Array{<:Integer})\n```\n\nConstruct in `A` a random permutation of length `length(A)`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). To randomly permute an arbitrary vector, see [`shuffle`](@ref) or [`shuffle!`](@ref).\n\n# Examples\n\n```jldoctest\njulia> randperm!(MersenneTwister(1234), Vector{Int}(undef, 4))\n4-element Vector{Int64}:\n 2\n 1\n 4\n 3\n```\n"
+        },
+        {
+            "name": "randperm!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandperm!([rng=default_rng(),] A::Array{<:Integer})\n```\n\nConstruct in `A` a random permutation of length `length(A)`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). To randomly permute an arbitrary vector, see [`shuffle`](@ref) or [`shuffle!`](@ref).\n\n# Examples\n\n```jldoctest\njulia> randperm!(MersenneTwister(1234), Vector{Int}(undef, 4))\n4-element Vector{Int64}:\n 2\n 1\n 4\n 3\n```\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r"
+            ],
+            "arg_types": [
+                "AbstractRNG"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "chars"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "chars",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "chars"
+            ],
+            "arg_types": [
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "chars",
+                "n"
+            ],
+            "arg_types": [
+                "",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandstring([rng=default_rng()], [chars], [len=8])\n```\n\nCreate a random string of length `len`, consisting of characters from `chars`, which defaults to the set of upper- and lower-case letters and the digits 0-9. The optional `rng` argument specifies a random number generator, see [Random Numbers](@ref).\n\n# Examples\n\n```jldoctest\njulia> Random.seed!(3); randstring()\n\"Lxz5hUwn\"\n\njulia> randstring(MersenneTwister(3), 'a':'z', 6)\n\"ocucay\"\n\njulia> randstring(\"ACGT\")\n\"TGCTCCTC\"\n```\n\n!!! note\n    `chars` can be any collection of characters, of type `Char` or `UInt8` (more efficient), provided [`rand`](@ref) can randomly pick characters from it.\n\n"
+        },
+        {
+            "name": "randsubseq",
+            "arg_names": [
+                "r",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandsubseq([rng=default_rng(),] A, p) -> Vector\n```\n\nReturn a vector consisting of a random subsequence of the given array `A`, where each element of `A` is included (in order) with independent probability `p`. (Complexity is linear in `p*length(A)`, so this function is efficient even if `p` is small and `A` is large.) Technically, this process is known as \"Bernoulli sampling\" of `A`.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randsubseq(rng, 1:8, 0.3)\n2-element Vector{Int64}:\n 7\n 8\n```\n"
+        },
+        {
+            "name": "randsubseq",
+            "arg_names": [
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandsubseq([rng=default_rng(),] A, p) -> Vector\n```\n\nReturn a vector consisting of a random subsequence of the given array `A`, where each element of `A` is included (in order) with independent probability `p`. (Complexity is linear in `p*length(A)`, so this function is efficient even if `p` is small and `A` is large.) Technically, this process is known as \"Bernoulli sampling\" of `A`.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> randsubseq(rng, 1:8, 0.3)\n2-element Vector{Int64}:\n 7\n 8\n```\n"
+        },
+        {
+            "name": "randsubseq!",
+            "arg_names": [
+                "r",
+                "S",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray",
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandsubseq!([rng=default_rng(),] S, A, p)\n```\n\nLike [`randsubseq`](@ref), but the results are stored in `S` (which is resized as needed).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> S = Int64[];\n\njulia> randsubseq!(rng, S, 1:8, 0.3)\n2-element Vector{Int64}:\n 7\n 8\n\njulia> S\n2-element Vector{Int64}:\n 7\n 8\n```\n"
+        },
+        {
+            "name": "randsubseq!",
+            "arg_names": [
+                "S",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractArray",
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nrandsubseq!([rng=default_rng(),] S, A, p)\n```\n\nLike [`randsubseq`](@ref), but the results are stored in `S` (which is resized as needed).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> S = Int64[];\n\njulia> randsubseq!(rng, S, 1:8, 0.3)\n2-element Vector{Int64}:\n 7\n 8\n\njulia> S\n2-element Vector{Int64}:\n 7\n 8\n```\n"
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nshuffle([rng=default_rng(),] v::AbstractArray)\n```\n\nReturn a randomly permuted copy of `v`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). To permute `v` in-place, see [`shuffle!`](@ref). To obtain randomly permuted indices, see [`randperm`](@ref).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> shuffle(rng, Vector(1:10))\n10-element Vector{Int64}:\n  6\n  1\n 10\n  2\n  3\n  9\n  5\n  7\n  4\n  8\n```\n"
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Base.OneTo"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nshuffle([rng=default_rng(),] v::AbstractArray)\n```\n\nReturn a randomly permuted copy of `v`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). To permute `v` in-place, see [`shuffle!`](@ref). To obtain randomly permuted indices, see [`randperm`](@ref).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> shuffle(rng, Vector(1:10))\n10-element Vector{Int64}:\n  6\n  1\n 10\n  2\n  3\n  9\n  5\n  7\n  4\n  8\n```\n"
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nshuffle([rng=default_rng(),] v::AbstractArray)\n```\n\nReturn a randomly permuted copy of `v`. The optional `rng` argument specifies a random number generator (see [Random Numbers](@ref)). To permute `v` in-place, see [`shuffle!`](@ref). To obtain randomly permuted indices, see [`randperm`](@ref).\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> shuffle(rng, Vector(1:10))\n10-element Vector{Int64}:\n  6\n  1\n 10\n  2\n  3\n  9\n  5\n  7\n  4\n  8\n```\n"
+        },
+        {
+            "name": "shuffle!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nshuffle!([rng=default_rng(),] v::AbstractArray)\n```\n\nIn-place version of [`shuffle`](@ref): randomly permute `v` in-place, optionally supplying the random-number generator `rng`.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> shuffle!(rng, Vector(1:16))\n16-element Vector{Int64}:\n  2\n 15\n  5\n 14\n  1\n  9\n 10\n  6\n 11\n  3\n 16\n  7\n  4\n 12\n  8\n 13\n```\n"
+        },
+        {
+            "name": "shuffle!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": "```\nshuffle!([rng=default_rng(),] v::AbstractArray)\n```\n\nIn-place version of [`shuffle`](@ref): randomly permute `v` in-place, optionally supplying the random-number generator `rng`.\n\n# Examples\n\n```jldoctest\njulia> rng = MersenneTwister(1234);\n\njulia> shuffle!(rng, Vector(1:16))\n16-element Vector{Int64}:\n  2\n 15\n  5\n 14\n  1\n  9\n 10\n  6\n 11\n  3\n 16\n  7\n  4\n 12\n  8\n 13\n```\n"
+        }
+    ]
+}

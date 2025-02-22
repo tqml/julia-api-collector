@@ -1,0 +1,43 @@
+{
+    "julia": "1.10.7",
+    "methods": [
+        {
+            "name": "var\"@printf\"",
+            "arg_names": [
+                "__source__",
+                "__module__",
+                "io_or_fmt",
+                "args..."
+            ],
+            "arg_types": [
+                "LineNumberNode",
+                "Module",
+                "",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Printf",
+            "doc": "```\n@printf([io::IO], \"%Fmt\", args...)\n```\n\nPrint `args` using C `printf` style format specification string. Optionally, an `IO` may be passed as the first argument to redirect output.\n\n# Examples\n\n```jldoctest\njulia> @printf \"Hello %s\" \"world\"\nHello world\n\njulia> @printf \"Scientific notation %e\" 1.234\nScientific notation 1.234000e+00\n\njulia> @printf \"Scientific notation three digits %.3e\" 1.23456\nScientific notation three digits 1.235e+00\n\njulia> @printf \"Decimal two digits %.2f\" 1.23456\nDecimal two digits 1.23\n\njulia> @printf \"Padded to length 5 %5i\" 123\nPadded to length 5   123\n\njulia> @printf \"Padded with zeros to length 6 %06i\" 123\nPadded with zeros to length 6 000123\n\njulia> @printf \"Use shorter of decimal or scientific %g %g\" 1.23 12300000.0\nUse shorter of decimal or scientific 1.23 1.23e+07\n\njulia> @printf \"Use dynamic width and precision  %*.*f\" 10 2 0.12345\nUse dynamic width and precision        0.12\n```\n\nFor a systematic specification of the format, see [here](https://en.cppreference.com/w/c/io/fprintf). See also [`@sprintf`](@ref) to get the result as a `String` instead of it being printed.\n\n# Caveats\n\n`Inf` and `NaN` are printed consistently as `Inf` and `NaN` for flags `%a`, `%A`, `%e`, `%E`, `%f`, `%F`, `%g`, and `%G`. Furthermore, if a floating point number is equally close to the numeric values of two possible output strings, the output string further away from zero is chosen.\n\n# Examples\n\n```jldoctest\njulia> @printf(\"%f %F %f %F\", Inf, Inf, NaN, NaN)\nInf Inf NaN NaN\n\njulia> @printf \"%.0f %.1f %f\" 0.5 0.025 -0.0078125\n0 0.0 -0.007812\n```\n\n!!! compat \"Julia 1.8\"\n    Starting in Julia 1.8, `%s` (string) and `%c` (character) widths are computed using [`textwidth`](@ref), which e.g. ignores zero-width characters (such as combining characters for diacritical marks) and treats certain \"wide\" characters (e.g. emoji) as width `2`.\n\n\n!!! compat \"Julia 1.10\"\n    Dynamic width specifiers like `%*s` and `%0*.*f` require Julia 1.10.\n\n"
+        },
+        {
+            "name": "var\"@sprintf\"",
+            "arg_names": [
+                "__source__",
+                "__module__",
+                "fmt",
+                "args..."
+            ],
+            "arg_types": [
+                "LineNumberNode",
+                "Module",
+                "",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Printf",
+            "doc": "```\n@sprintf(\"%Fmt\", args...)\n```\n\nReturn [`@printf`](@ref) formatted output as string.\n\n# Examples\n\n```jldoctest\njulia> @sprintf \"this is a %s %15.1f\" \"test\" 34.567\n\"this is a test            34.6\"\n```\n"
+        }
+    ]
+}

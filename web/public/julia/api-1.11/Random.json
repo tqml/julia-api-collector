@@ -1,0 +1,1703 @@
+{
+    "julia": "1.11.2",
+    "methods": [
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "r",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "bitrand",
+            "arg_names": [
+                "r",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "default_rng",
+            "arg_names": [
+                "tid"
+            ],
+            "arg_types": [
+                "Int64"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "default_rng",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Random.UnsafeView{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A1",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Bool}",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float32}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float32}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen01{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float16}",
+                "Random.SamplerTrivial{Random.CloseOpen12{Float16}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "r",
+                "A",
+                "I"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "AbstractArray{Float64}",
+                "Random.SamplerTrivial{<:Random.FloatInterval{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int32}",
+                "Random.SamplerType{Int32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int16}",
+                "Random.SamplerType{Int16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int64}",
+                "Random.SamplerType{Int64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt32}",
+                "Random.SamplerType{UInt32}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Bool}",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt64}",
+                "Random.SamplerType{UInt64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt128}",
+                "Random.SamplerType{UInt128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int128}",
+                "Random.SamplerType{Int128}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt16}",
+                "Random.SamplerType{UInt16}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{UInt8}",
+                "Random.SamplerType{UInt8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rd",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Array{Int8}",
+                "Random.SamplerType{Int8}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "B",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BitArray",
+                "Random.SamplerType{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "x",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BigInt",
+                "Random.SamplerBigInt"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "z",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "BigFloat",
+                "Random.SamplerBigFloat{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Type{X}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                "sp"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Random.Sampler"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A",
+                "X"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A",
+                ""
+            ],
+            "arg_types": [
+                "AbstractArray{T}",
+                "Type{X}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A",
+                "X"
+            ],
+            "arg_types": [
+                "AbstractArray{T}",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "rand!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randcycle",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randcycle",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "T"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randcycle!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randcycle!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                ""
+            ],
+            "arg_types": [
+                "Type{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "Type{T}",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "Type{T}",
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng"
+            ],
+            "arg_types": [
+                "AbstractRNG"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "T"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Union{Type{Float16}, Type{Float32}, Type{Float64}}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                ""
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}",
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "rng",
+                "",
+                "dim1",
+                "dims"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Type{T}",
+                "Integer",
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "NTuple{N, Int64} where N"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp",
+            "arg_names": [
+                "dims"
+            ],
+            "arg_types": [
+                "Integer..."
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randexp!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "A"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Array{Float64}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randn!",
+            "arg_names": [
+                "rng",
+                "A"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randperm",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randperm",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "T"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randperm!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randperm!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Array{<:Integer}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r"
+            ],
+            "arg_types": [
+                "AbstractRNG"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "chars"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "chars",
+                "n"
+            ],
+            "arg_types": [
+                "",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "r",
+                "chars",
+                "n"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "",
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "n"
+            ],
+            "arg_types": [
+                "Integer"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randstring",
+            "arg_names": [
+                "chars"
+            ],
+            "arg_types": [
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randsubseq",
+            "arg_names": [
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randsubseq",
+            "arg_names": [
+                "r",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{T}",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randsubseq!",
+            "arg_names": [
+                "S",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractArray",
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "randsubseq!",
+            "arg_names": [
+                "r",
+                "S",
+                "A",
+                "p"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray",
+                "AbstractArray",
+                "Real"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "r",
+                ""
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                "Nothing"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "r",
+                "seed"
+            ],
+            "arg_types": [
+                "MersenneTwister",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "rng",
+                ""
+            ],
+            "arg_types": [
+                "RandomDevice",
+                "Nothing"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "rng"
+            ],
+            "arg_types": [
+                "AbstractRNG"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+            ],
+            "arg_types": [
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "rng",
+                ""
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                "Nothing"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "rng",
+                "seed"
+            ],
+            "arg_types": [
+                "Union{TaskLocalRNG, Xoshiro}",
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "seed!",
+            "arg_names": [
+                "seed"
+            ],
+            "arg_types": [
+                ""
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "Base.OneTo"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle!",
+            "arg_names": [
+                "a"
+            ],
+            "arg_types": [
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray{Bool}"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        },
+        {
+            "name": "shuffle!",
+            "arg_names": [
+                "r",
+                "a"
+            ],
+            "arg_types": [
+                "AbstractRNG",
+                "AbstractArray"
+            ],
+            "kwarg_names": [
+            ],
+            "module": "Random",
+            "doc": ""
+        }
+    ]
+}

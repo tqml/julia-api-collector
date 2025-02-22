@@ -1,0 +1,2 @@
+var"@printf"(__source__::LineNumberNode, __module__::Module, io_or_fmt, args...)
+var"@sprintf"(__source__::LineNumberNode, __module__::Module, fmt, args...)

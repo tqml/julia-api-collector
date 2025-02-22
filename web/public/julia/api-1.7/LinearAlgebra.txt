@@ -1,0 +1,1196 @@
+/(A::AbstractMatrix, B::Union{LowerTriangular, UpperTriangular})
+/(A::AbstractMatrix, B::Union{UnitLowerTriangular, UnitUpperTriangular})
+/(A::AbstractMatrix, F::Adjoint{<:Any, <:LU})
+/(A::AbstractMatrix, J::UniformScaling)
+/(A::AbstractVecOrMat, B::AbstractVecOrMat)
+/(A::AbstractVector, B::Union{LowerTriangular, UpperTriangular})
+/(A::AbstractVector, B::Union{UnitLowerTriangular, UnitUpperTriangular})
+/(A::Bidiagonal, B::Number)
+/(A::Hermitian, x::Real)
+/(A::LowerTriangular, B::LowerTriangular)
+/(A::LowerTriangular, B::UnitLowerTriangular)
+/(A::LowerTriangular, x::Number)
+/(A::SymTridiagonal, B::Number)
+/(A::Symmetric, x::Number)
+/(A::Tridiagonal, B::Number)
+/(A::Union{LinearAlgebra.AbstractTriangular, StridedMatrix}, D::Diagonal)
+/(A::UnitLowerTriangular, B::LowerTriangular)
+/(A::UnitLowerTriangular, B::UnitLowerTriangular)
+/(A::UnitLowerTriangular, x::Number)
+/(A::UnitUpperTriangular, B::UnitUpperTriangular)
+/(A::UnitUpperTriangular, B::UpperTriangular)
+/(A::UnitUpperTriangular, x::Number)
+/(A::UpperTriangular, B::UnitUpperTriangular)
+/(A::UpperTriangular, B::UpperTriangular)
+/(A::UpperTriangular, x::Number)
+/(B::AbstractMatrix, F::Transpose{<:Any, <:Factorization{<:Real}})
+/(B::AbstractMatrix, F::Transpose{<:Any, <:Factorization})
+/(B::AbstractMatrix, F::Union{Adjoint{<:Any, <:Factorization}, Factorization})
+/(B::Adjoint{T, <:AbstractVector} where T, F::Transpose{<:Any, <:Factorization{<:Real}})
+/(B::Adjoint{T, <:AbstractVector} where T, F::Transpose{<:Any, <:Factorization})
+/(B::Transpose{T, <:AbstractVector} where T, F::Transpose{<:Any, <:Factorization{<:Real}})
+/(B::Transpose{T, <:AbstractVector} where T, F::Transpose{<:Any, <:Factorization})
+/(B::Transpose{T, <:AbstractVector} where T, adjF::Adjoint{<:Any, <:Factorization})
+/(B::Union{Array{Complex{T}, 1}, Array{Complex{T}, 2}}, F::Factorization{T}) where T<:Union{Float32, Float64}
+/(D::Diagonal, x::Number)
+/(Da::Diagonal, Db::Diagonal)
+/(H::UpperHessenberg, B::Bidiagonal)
+/(H::UpperHessenberg, U::UnitUpperTriangular)
+/(H::UpperHessenberg, U::UpperTriangular)
+/(H::UpperHessenberg, x::Diagonal)
+/(H::UpperHessenberg, x::Number)
+/(H::UpperHessenberg, x::UniformScaling)
+/(J1::UniformScaling, J2::UniformScaling)
+/(J::UniformScaling, A::AbstractMatrix)
+/(J::UniformScaling, x::Number)
+/(adjA::Adjoint{<:Any, <:AbstractMatrix}, F::Adjoint{<:Any, <:LU})
+/(adjA::Adjoint{<:Any, <:AbstractVector}, F::Adjoint{<:Any, <:LU})
+/(adjB::Adjoint{T, <:AbstractVector} where T, adjF::Adjoint{<:Any, <:Factorization})
+/(trA::Transpose{<:Any, <:AbstractMatrix}, F::Adjoint{<:Any, <:LU})
+/(trA::Transpose{<:Any, <:AbstractVector}, F::Adjoint{<:Any, <:LU})
+/(u::Adjoint{T, <:AbstractVector} where T, A::AbstractMatrix)
+/(u::Adjoint{T, <:AbstractVector} where T, A::Transpose{<:Any, <:AbstractMatrix})
+/(u::Adjoint{T, <:AbstractVector} where T, A::Union{LowerTriangular, UpperTriangular})
+/(u::Adjoint{T, <:AbstractVector} where T, A::Union{UnitLowerTriangular, UnitUpperTriangular})
+/(u::Transpose{T, <:AbstractVector} where T, A::AbstractMatrix)
+/(u::Transpose{T, <:AbstractVector} where T, A::Adjoint{<:Any, <:AbstractMatrix})
+/(u::Transpose{T, <:AbstractVector} where T, A::LowerTriangular{<:Any, <:Adjoint})
+/(u::Transpose{T, <:AbstractVector} where T, A::LowerTriangular{<:Any, <:Transpose})
+/(u::Transpose{T, <:AbstractVector} where T, A::Union{LowerTriangular, UpperTriangular})
+/(u::Transpose{T, <:AbstractVector} where T, A::Union{UnitLowerTriangular, UnitUpperTriangular})
+/(u::Transpose{T, <:AbstractVector} where T, A::UnitLowerTriangular{<:Any, <:Adjoint})
+/(u::Transpose{T, <:AbstractVector} where T, A::UnitLowerTriangular{<:Any, <:Transpose})
+/(u::Transpose{T, <:AbstractVector} where T, A::UnitUpperTriangular{<:Any, <:Adjoint})
+/(u::Transpose{T, <:AbstractVector} where T, A::UnitUpperTriangular{<:Any, <:Transpose})
+/(u::Transpose{T, <:AbstractVector} where T, A::UpperTriangular{<:Any, <:Adjoint})
+/(u::Transpose{T, <:AbstractVector} where T, A::UpperTriangular{<:Any, <:Transpose})
+/(v::AbstractVector, J::UniformScaling)
+/(x::Number, v::AbstractVector)
+\(A::AbstractMatrix, B::AbstractVecOrMat)
+\(A::AbstractMatrix, J::UniformScaling)
+\(A::Adjoint{<:Any, <:LU}, B::Adjoint{<:Any, <:StridedVecOrMat})
+\(A::Adjoint{<:Any, <:Tridiagonal}, B::Adjoint{<:Any, <:StridedVecOrMat})
+\(A::Adjoint{T, <:LU{T, <:StridedMatrix{T} where T}}, B::Adjoint{T, <:StridedVecOrMat{T}}) where T<:Union{ComplexF32, ComplexF64}
+\(A::Bidiagonal, B::AbstractVecOrMat)
+\(A::Bidiagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}}, B::AbstractVecOrMat{<:Number})
+\(A::LowerTriangular, B::LowerTriangular)
+\(A::LowerTriangular, B::UnitLowerTriangular)
+\(A::Transpose{<:Any, <:LU}, B::Transpose{<:Any, <:StridedVecOrMat})
+\(A::Transpose{T, <:LU{T, <:StridedMatrix{T} where T}}, B::Transpose{T, <:StridedVecOrMat{T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+\(A::Union{Hermitian{var"#s861", var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861", var"#s860"<:(StridedMatrix{T} where T)}, B::AbstractMatrix)
+\(A::Union{Hermitian{var"#s861", var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861", var"#s860"<:(StridedMatrix{T} where T)}, B::AbstractVector)
+\(A::Union{LowerTriangular, UpperTriangular}, B::AbstractMatrix)
+\(A::Union{LowerTriangular, UpperTriangular}, B::AbstractVector)
+\(A::Union{QR{T, S} where S<:AbstractMatrix{T}, LinearAlgebra.QRCompactWY{T, M} where M<:AbstractMatrix{T}, QRPivoted{T, S} where S<:AbstractMatrix{T}}, BIn::Union{Array{Complex{T}, 1}, Array{Complex{T}, 2}}) where T<:Union{Float32, Float64}
+\(A::Union{UnitLowerTriangular, UnitUpperTriangular}, B::AbstractMatrix)
+\(A::Union{UnitLowerTriangular, UnitUpperTriangular}, B::AbstractVector)
+\(A::UnitLowerTriangular, B::LowerTriangular)
+\(A::UnitLowerTriangular, B::UnitLowerTriangular)
+\(A::UnitUpperTriangular, B::UnitUpperTriangular)
+\(A::UnitUpperTriangular, B::UpperTriangular)
+\(A::UpperTriangular, B::UnitUpperTriangular)
+\(A::UpperTriangular, B::UpperTriangular)
+\(B::Number, A::Bidiagonal)
+\(B::Number, A::SymTridiagonal)
+\(B::Number, A::Tridiagonal)
+\(D::Diagonal, A::AbstractMatrix)
+\(D::Diagonal, b::AbstractVector)
+\(Da::Diagonal, Db::Diagonal)
+\(F::Factorization, J::UniformScaling)
+\(F::Factorization{T}, B::Union{Array{Complex{T}, 1}, Array{Complex{T}, 2}}) where T<:Union{Float32, Float64}
+\(F::LQ{T, S} where S<:AbstractMatrix{T}, B::Union{Array{Complex{T}, 1}, Array{Complex{T}, 2}}) where T<:Union{Float32, Float64}
+\(F::Transpose{<:Any, <:Factorization{<:Real}}, B::AbstractVecOrMat)
+\(F::Transpose{<:Any, <:Factorization}, B::AbstractVecOrMat)
+\(F::Union{Adjoint{<:Any, <:Factorization}, Factorization}, B::AbstractVecOrMat)
+\(F::Union{Adjoint{<:Any, <:Union{BunchKaufman{T, S}, Cholesky{T, S}, LQ{T, S}, LU{T, S}, QR{T, S}, LinearAlgebra.QRCompactWY{T, S}, QRPivoted{T, S}, SVD{T, <:Real, S}} where {T, S}}, Union{BunchKaufman{T, S}, Cholesky{T, S}, LQ{T, S}, LU{T, S}, QR{T, S}, LinearAlgebra.QRCompactWY{T, S}, QRPivoted{T, S}, SVD{T, <:Real, S}} where {T, S}}, B::AbstractVecOrMat)
+\(F::Union{BunchKaufman{T, S}, Cholesky{T, S}, LQ{T, S}, LU{T, S}, QR{T, S}, LinearAlgebra.QRCompactWY{T, S}, QRPivoted{T, S}, SVD{T, <:Real, S}} where S, B::Union{Array{Complex{T}, 1}, Array{Complex{T}, 2}}) where T<:Union{Float32, Float64}
+\(J1::UniformScaling, J2::UniformScaling)
+\(J::UniformScaling, A::AbstractVecOrMat)
+\(T::SymTridiagonal, B::StridedVecOrMat)
+\(U::UnitUpperTriangular, H::UpperHessenberg)
+\(U::UpperTriangular, H::UpperHessenberg)
+\(a::AbstractVector, b::AbstractArray)
+\(adjA::Adjoint{<:Any, <:Bidiagonal}, B::AbstractVecOrMat)
+\(adjA::Adjoint{<:Number, <:Bidiagonal{var"#s859", V} where {var"#s859"<:Number, V<:AbstractVector{var"#s859"}}}, B::AbstractVecOrMat{<:Number})
+\(transA::Transpose{<:Any, <:Bidiagonal}, B::AbstractVecOrMat)
+\(transA::Transpose{<:Number, <:Bidiagonal{var"#s859", V} where {var"#s859"<:Number, V<:AbstractVector{var"#s859"}}}, B::AbstractVecOrMat{<:Number})
+\(u::Union{Adjoint{T, var"#s861"}, Transpose{T, var"#s861"}} where {T, var"#s861"<:(AbstractVector)}, v::Union{Adjoint{T, var"#s861"}, Transpose{T, var"#s861"}} where {T, var"#s861"<:(AbstractVector)})
+\(x::Diagonal, H::UpperHessenberg)
+\(x::Number, A::LowerTriangular)
+\(x::Number, A::UnitLowerTriangular)
+\(x::Number, A::UnitUpperTriangular)
+\(x::Number, A::UpperTriangular)
+\(x::Number, D::Diagonal)
+\(x::Number, H::UpperHessenberg)
+\(x::Number, J::UniformScaling)
+\(x::UniformScaling, H::UpperHessenberg)
+adjoint!(A::LowerTriangular)
+adjoint!(A::UnitLowerTriangular)
+adjoint!(A::UnitUpperTriangular)
+adjoint!(A::UpperTriangular)
+adjoint!(B::AbstractMatrix, A::AbstractMatrix)
+adjoint!(B::AbstractMatrix, A::AbstractVector)
+adjoint!(B::AbstractVector, A::AbstractMatrix)
+adjoint(A::AbstractVecOrMat)
+adjoint(A::Adjoint)
+adjoint(A::Hermitian)
+adjoint(A::LQ)
+adjoint(A::LowerTriangular)
+adjoint(A::Symmetric)
+adjoint(A::Symmetric{var"#s861", S} where {var"#s861"<:Real, S<:(AbstractMatrix{<:var"#s861"})})
+adjoint(A::Transpose{<:Real})
+adjoint(A::UnitLowerTriangular)
+adjoint(A::UnitUpperTriangular)
+adjoint(A::UpperTriangular)
+adjoint(B::Bidiagonal)
+adjoint(B::Bidiagonal{var"#s861", V} where {var"#s861"<:Real, V<:AbstractVector{var"#s861"}})
+adjoint(B::BunchKaufman)
+adjoint(B::Union{BitMatrix, BitVector})
+adjoint(C::Union{Cholesky, CholeskyPivoted})
+adjoint(D::Diagonal)
+adjoint(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+adjoint(F::Hessenberg)
+adjoint(F::LDLt)
+adjoint(F::LDLt{<:Real, <:SymTridiagonal})
+adjoint(F::LU)
+adjoint(F::SVD)
+adjoint(F::Union{QR, LinearAlgebra.QRCompactWY, QRPivoted})
+adjoint(G::LinearAlgebra.Givens)
+adjoint(J::UniformScaling)
+adjoint(R::LinearAlgebra.Rotation)
+adjoint(S::SymTridiagonal)
+adjoint(S::SymTridiagonal{var"#s861", V} where {var"#s861"<:Real, V<:AbstractVector{var"#s861"}})
+adjoint(S::Tridiagonal)
+adjoint(S::Tridiagonal{var"#s861", V} where {var"#s861"<:Real, V<:AbstractVector{var"#s861"}})
+adjoint(a::AbstractArray)
+axpby!(α, x::AbstractArray, β, y::AbstractArray)
+axpy!(α, x::AbstractArray, rx::AbstractArray{<:Integer}, y::AbstractArray, ry::AbstractArray{<:Integer})
+axpy!(α, x::AbstractArray, y::AbstractArray)
+bunchkaufman!(A::Hermitian{T, S} where {T<:Union{ComplexF32, ComplexF64}, S<:StridedMatrix{T}})
+bunchkaufman!(A::Hermitian{T, S} where {T<:Union{ComplexF32, ComplexF64}, S<:StridedMatrix{T}}, rook::Bool; check)
+bunchkaufman!(A::StridedMatrix{var"#s857"} where var"#s857"<:Union{Float32, Float64, ComplexF32, ComplexF64}, rook::Bool; check)
+bunchkaufman!(A::StridedMatrix{var"#s858"} where var"#s858"<:Union{Float32, Float64, ComplexF32, ComplexF64})
+bunchkaufman!(A::Union{Hermitian{T, S}, Symmetric{T, S}, Symmetric{Complex{T}, S}} where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)})
+bunchkaufman!(A::Union{Hermitian{T, S}, Symmetric{T, S}, Symmetric{Complex{T}, S}} where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)}, rook::Bool; check)
+bunchkaufman(A::AbstractMatrix{T}) where T
+bunchkaufman(A::AbstractMatrix{T}, rook::Bool; check) where T
+cholesky!(A::Diagonal)
+cholesky!(A::Diagonal, ::Val{false}; check)
+cholesky!(A::StridedMatrix{T} where T)
+cholesky!(A::StridedMatrix{T} where T, ::Val{false}; check)
+cholesky!(A::StridedMatrix{T} where T, ::Val{true}; tol, check)
+cholesky!(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S})
+cholesky!(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, ::Val{false}; check)
+cholesky!(A::Union{Hermitian{var"#s856", var"#s855"}, Hermitian{Complex{var"#s856"}, var"#s855"}, Symmetric{var"#s856", var"#s855"}} where {var"#s856"<:Union{Float32, Float64}, var"#s855"<:(StridedMatrix{T} where T)}, ::Val{true}; tol, check)
+cholesky!(A::Union{Hermitian{var"#s858", S}, Hermitian{Complex{var"#s858"}, S}, Symmetric{var"#s858", S}} where {var"#s858"<:Real, S}, ::Val{true}; tol, check)
+cholesky(A::Diagonal)
+cholesky(A::Diagonal, ::Val{false}; check)
+cholesky(A::Union{Union{Hermitian{var"#s854", var"#s853"}, Hermitian{Complex{var"#s854"}, var"#s853"}, Symmetric{var"#s854", var"#s853"}} where {var"#s854"<:Real, var"#s853"<:(StridedMatrix{T} where T)}, StridedMatrix}, ::Val{false}; check)
+cholesky(A::Union{Union{Hermitian{var"#s856", var"#s855"}, Hermitian{Complex{var"#s856"}, var"#s855"}, Symmetric{var"#s856", var"#s855"}} where {var"#s856"<:Real, var"#s855"<:(StridedMatrix{T} where T)}, StridedMatrix})
+cholesky(A::Union{Union{Hermitian{var"#s857", var"#s856"}, Hermitian{Complex{var"#s857"}, var"#s856"}, Symmetric{var"#s857", var"#s856"}} where {var"#s857"<:Real, var"#s856"<:(StridedMatrix{T} where T)}, StridedMatrix}, ::Val{true}; tol, check)
+cholesky(x::Number)
+cholesky(x::Number, uplo::Symbol)
+cond(A::AbstractMatrix)
+cond(A::AbstractMatrix, p::Real)
+cond(A::LowerTriangular{var"#s854", S} where {var"#s854"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s854"}}, p::Real)
+cond(A::LowerTriangular{var"#s855", S} where {var"#s855"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s855"}})
+cond(A::UnitLowerTriangular{var"#s854", S} where {var"#s854"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s854"}}, p::Real)
+cond(A::UnitLowerTriangular{var"#s855", S} where {var"#s855"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s855"}})
+cond(A::UnitUpperTriangular{var"#s854", S} where {var"#s854"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s854"}}, p::Real)
+cond(A::UnitUpperTriangular{var"#s855", S} where {var"#s855"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s855"}})
+cond(A::UpperTriangular{var"#s854", S} where {var"#s854"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s854"}}, p::Real)
+cond(A::UpperTriangular{var"#s855", S} where {var"#s855"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:AbstractMatrix{var"#s855"}})
+cond(J::UniformScaling{T}) where T
+cond(x::Number)
+cond(x::Number, p)
+condskeel(A::AbstractMatrix)
+condskeel(A::AbstractMatrix, p::Real)
+condskeel(A::AbstractMatrix, x::AbstractVector)
+condskeel(A::AbstractMatrix, x::AbstractVector, p::Real)
+copy_transpose!(B::AbstractMatrix, ir_dest::UnitRange{Int64}, jr_dest::UnitRange{Int64}, tM::AbstractChar, M::AbstractVecOrMat, ir_src::UnitRange{Int64}, jr_src::UnitRange{Int64})
+copy_transpose!(B::AbstractVecOrMat, ir_dest::AbstractRange{Int64}, jr_dest::AbstractRange{Int64}, A::AbstractVecOrMat, ir_src::AbstractRange{Int64}, jr_src::AbstractRange{Int64})
+copyto!(A::AbstractMatrix, J::UniformScaling)
+copyto!(A::T, B::T) where T<:Union{LowerTriangular, UnitLowerTriangular}
+copyto!(A::T, B::T) where T<:Union{UnitUpperTriangular, UpperTriangular}
+copyto!(B::AbstractVecOrMat, ir_dest::UnitRange{Int64}, jr_dest::UnitRange{Int64}, tM::AbstractChar, M::AbstractVecOrMat, ir_src::UnitRange{Int64}, jr_src::UnitRange{Int64})
+copyto!(D1::Diagonal, D2::Diagonal)
+copyto!(dest::AbstractMatrix, src::LinearAlgebra.AbstractQ)
+copyto!(dest::Array{T}, rdest::Union{AbstractRange{Ti}, UnitRange{Ti}}, src::Array{T}, rsrc::Union{AbstractRange{Ti}, UnitRange{Ti}}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, Ti<:Integer}
+copyto!(dest::Bidiagonal, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+copyto!(dest::Diagonal, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+copyto!(dest::Hermitian, src::Hermitian)
+copyto!(dest::LowerTriangular, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+copyto!(dest::PermutedDimsArray{T, 2, perm}, src::LinearAlgebra.AbstractQ) where {T, perm}
+copyto!(dest::SymTridiagonal, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+copyto!(dest::Symmetric, src::Symmetric)
+copyto!(dest::Tridiagonal, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+copyto!(dest::Tridiagonal, src::Tridiagonal)
+copyto!(dest::UpperTriangular, bc::Base.Broadcast.Broadcasted{<:LinearAlgebra.StructuredMatrixStyle})
+cross(a::AbstractVector, b::AbstractVector)
+cross(a::AbstractVector, b::AbstractVector)
+det(A::AbstractMatrix{BigInt})
+det(A::AbstractMatrix{T}) where T
+det(A::Eigen)
+det(A::LowerTriangular)
+det(A::SymTridiagonal; shift)
+det(A::Symmetric)
+det(A::Symmetric{var"#s861", S} where {var"#s861"<:Real, S<:(AbstractMatrix{<:var"#s861"})})
+det(A::Tridiagonal)
+det(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S})
+det(A::UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}) where T
+det(A::UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}) where T
+det(A::UpperTriangular)
+det(C::Cholesky)
+det(C::CholeskyPivoted)
+det(D::Diagonal)
+det(F::Factorization)
+det(F::Hessenberg)
+det(F::LU{T, S} where S<:AbstractMatrix{T}) where T
+det(F::UpperHessenberg; shift)
+det(J::UniformScaling{T}) where T
+det(Q::LinearAlgebra.LQPackedQ)
+det(Q::LinearAlgebra.QRCompactWYQ)
+det(Q::LinearAlgebra.QRPackedQ)
+det(x::Number)
+diag(A::AbstractMatrix)
+diag(A::AbstractMatrix, k::Integer)
+diag(A::AbstractVector)
+diag(A::Hermitian)
+diag(A::LowerTriangular)
+diag(A::Symmetric)
+diag(A::UnitLowerTriangular)
+diag(A::UnitUpperTriangular)
+diag(A::UpperTriangular)
+diag(B::BitMatrix)
+diag(D::Diagonal)
+diag(D::Diagonal, k::Integer)
+diag(M::Bidiagonal)
+diag(M::Bidiagonal, n::Integer)
+diag(M::SymTridiagonal)
+diag(M::SymTridiagonal, n::Integer)
+diag(M::SymTridiagonal{var"#s860", V} where {var"#s860"<:Number, V<:AbstractVector{var"#s860"}}, n::Integer)
+diag(M::SymTridiagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+diag(M::Tridiagonal)
+diag(M::Tridiagonal, n::Integer)
+diagind(A::AbstractMatrix)
+diagind(A::AbstractMatrix, k::Integer)
+diagind(m::Integer, n::Integer)
+diagind(m::Integer, n::Integer, k::Integer)
+diagm(kv::Pair{<:Integer, <:AbstractVector}...)
+diagm(m::Integer, n::Integer, kv::Pair{<:Integer, <:AbstractVector}...)
+diagm(m::Integer, n::Integer, v::AbstractVector)
+diagm(v::AbstractVector)
+dot(A::AbstractMatrix, B::Diagonal)
+dot(A::AbstractMatrix, B::Diagonal)
+dot(A::AbstractMatrix, J::UniformScaling)
+dot(A::AbstractMatrix, J::UniformScaling)
+dot(A::Diagonal, B::Diagonal)
+dot(A::Diagonal, B::Diagonal)
+dot(A::Hermitian, B::Hermitian)
+dot(A::Hermitian, B::Hermitian)
+dot(A::Symmetric, B::Symmetric)
+dot(A::Symmetric, B::Symmetric)
+dot(D::Diagonal, B::AbstractMatrix)
+dot(D::Diagonal, B::AbstractMatrix)
+dot(J::UniformScaling, A::AbstractMatrix)
+dot(J::UniformScaling, A::AbstractMatrix)
+dot(x, A, y)
+dot(x, A, y)
+dot(x, y)
+dot(x, y)
+dot(x::AbstractArray, y::AbstractArray)
+dot(x::AbstractArray, y::AbstractArray)
+dot(x::AbstractVector, A::AbstractMatrix, y::AbstractVector)
+dot(x::AbstractVector, A::AbstractMatrix, y::AbstractVector)
+dot(x::AbstractVector, A::LowerTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::LowerTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::Tridiagonal, y::AbstractVector)
+dot(x::AbstractVector, A::Tridiagonal, y::AbstractVector)
+dot(x::AbstractVector, A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, y::AbstractVector)
+dot(x::AbstractVector, A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, y::AbstractVector)
+dot(x::AbstractVector, A::UnitLowerTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::UnitLowerTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::UnitUpperTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::UnitUpperTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::UpperTriangular, y::AbstractVector)
+dot(x::AbstractVector, A::UpperTriangular, y::AbstractVector)
+dot(x::AbstractVector, B::Bidiagonal, y::AbstractVector)
+dot(x::AbstractVector, B::Bidiagonal, y::AbstractVector)
+dot(x::AbstractVector, D::Diagonal, y::AbstractVector)
+dot(x::AbstractVector, D::Diagonal, y::AbstractVector)
+dot(x::AbstractVector, H::UpperHessenberg, y::AbstractVector)
+dot(x::AbstractVector, H::UpperHessenberg, y::AbstractVector)
+dot(x::AbstractVector, J::UniformScaling, y::AbstractVector)
+dot(x::AbstractVector, J::UniformScaling, y::AbstractVector)
+dot(x::AbstractVector, S::SymTridiagonal, y::AbstractVector)
+dot(x::AbstractVector, S::SymTridiagonal, y::AbstractVector)
+dot(x::AbstractVector, a::Number, y::AbstractVector)
+dot(x::AbstractVector, a::Number, y::AbstractVector)
+dot(x::AbstractVector, a::Union{Real, Complex}, y::AbstractVector)
+dot(x::AbstractVector, a::Union{Real, Complex}, y::AbstractVector)
+dot(x::AbstractVector, adjA::Adjoint, y::AbstractVector)
+dot(x::AbstractVector, adjA::Adjoint, y::AbstractVector)
+dot(x::AbstractVector, transA::Transpose{<:Real}, y::AbstractVector)
+dot(x::AbstractVector, transA::Transpose{<:Real}, y::AbstractVector)
+dot(x::Adjoint{<:Union{Real, Complex}}, y::Adjoint{<:Union{Real, Complex}})
+dot(x::Adjoint{<:Union{Real, Complex}}, y::Adjoint{<:Union{Real, Complex}})
+dot(x::BitVector, y::BitVector)
+dot(x::BitVector, y::BitVector)
+dot(x::Number, y::Number)
+dot(x::Number, y::Number)
+dot(x::Transpose, y::Transpose)
+dot(x::Transpose, y::Transpose)
+dot(x::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}, y::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}) where T<:Union{ComplexF32, ComplexF64}
+dot(x::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}, y::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}) where T<:Union{ComplexF32, ComplexF64}
+dot(x::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}, y::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}) where T<:Union{Float32, Float64}
+dot(x::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}, y::Union{Base.ReinterpretArray{T, 1, S, A, IsReshaped} where {A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, 1, A} where A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, SubArray{T, 1, A, I} where {A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, Base.ReshapedArray{T, N, A} where {T, N, A<:Union{Base.ReinterpretArray{T, N, S, A, IsReshaped} where {T, N, A<:Union{SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}, IsReshaped, S}, SubArray{T, N, A, I, true} where {T, N, A<:DenseArray, I<:Union{Tuple{Vararg{Real}}, Tuple{AbstractUnitRange, Vararg{Any}}}}, DenseArray}}, DenseArray}, I<:Tuple{Vararg{Union{Int64, AbstractRange{Int64}, Base.AbstractCartesianIndex, Base.ReshapedArray{T, N, A, Tuple{}} where {T, N, A<:AbstractUnitRange}}}}}, DenseArray{T}, DenseVecOrMat{T}}) where T<:Union{Float32, Float64}
+dot(x::Vector{T}, rx::Union{AbstractRange{TI}, UnitRange{TI}}, y::Vector{T}, ry::Union{AbstractRange{TI}, UnitRange{TI}}) where {T<:Union{ComplexF32, ComplexF64}, TI<:Integer}
+dot(x::Vector{T}, rx::Union{AbstractRange{TI}, UnitRange{TI}}, y::Vector{T}, ry::Union{AbstractRange{TI}, UnitRange{TI}}) where {T<:Union{ComplexF32, ComplexF64}, TI<:Integer}
+dot(x::Vector{T}, rx::Union{AbstractRange{TI}, UnitRange{TI}}, y::Vector{T}, ry::Union{AbstractRange{TI}, UnitRange{TI}}) where {T<:Union{Float32, Float64}, TI<:Integer}
+dot(x::Vector{T}, rx::Union{AbstractRange{TI}, UnitRange{TI}}, y::Vector{T}, ry::Union{AbstractRange{TI}, UnitRange{TI}}) where {T<:Union{Float32, Float64}, TI<:Integer}
+eigen!(A::Hermitian{T, S}, B::Hermitian{T, S}; sortby) where {T<:Union{ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+eigen!(A::StridedMatrix{T}, B::StridedMatrix{T}; sortby) where T<:Union{ComplexF32, ComplexF64}
+eigen!(A::StridedMatrix{T}, B::StridedMatrix{T}; sortby) where T<:Union{Float32, Float64}
+eigen!(A::StridedMatrix{T}; permute, scale, sortby) where T<:Union{ComplexF32, ComplexF64}
+eigen!(A::StridedMatrix{T}; permute, scale, sortby) where T<:Union{Float32, Float64}
+eigen!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}})
+eigen!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}}, irange::UnitRange)
+eigen!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}}, vl::Real, vu::Real)
+eigen!(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}}, B::AbstractMatrix{T}; sortby) where {T<:Number, S<:(StridedMatrix{T} where T)}
+eigen!(A::Union{Hermitian{T, S}, Symmetric{T, S}}, B::Union{Hermitian{T, S}, Symmetric{T, S}}; sortby) where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)}
+eigen!(A::Union{Hermitian{T, var"#s861"}, Hermitian{Complex{T}, var"#s861"}, Symmetric{T, var"#s861"}} where var"#s861"<:(StridedMatrix{T} where T), vl::Real, vh::Real) where T<:Union{Float32, Float64}
+eigen!(A::Union{Hermitian{var"#s858", var"#s857"}, Hermitian{Complex{var"#s858"}, var"#s857"}, Symmetric{var"#s858", var"#s857"}} where {var"#s858"<:Union{Float32, Float64}, var"#s857"<:(StridedMatrix{T} where T)}; sortby)
+eigen!(A::Union{Hermitian{var"#s861", var"#s860"}, Hermitian{Complex{var"#s861"}, var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861"<:Union{Float32, Float64}, var"#s860"<:(StridedMatrix{T} where T)}, irange::UnitRange)
+eigen(A::AbstractMatrix{TA}, B::AbstractMatrix{TB}; kws...) where {TA, TB}
+eigen(A::AbstractMatrix{T}; permute, scale, sortby) where T
+eigen(A::LinearAlgebra.AbstractTriangular)
+eigen(A::Number, B::Number)
+eigen(A::SymTridiagonal{T, V} where V<:AbstractVector{T}) where T
+eigen(A::SymTridiagonal{T, V} where V<:AbstractVector{T}, irange::UnitRange) where T
+eigen(A::SymTridiagonal{T, V} where V<:AbstractVector{T}, vl::Real, vu::Real) where T
+eigen(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, irange::UnitRange)
+eigen(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, vl::Real, vh::Real)
+eigen(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}; sortby)
+eigen(D::Diagonal; permute, scale, sortby)
+eigen(M::Bidiagonal)
+eigen(x::Number)
+eigmax(A::SymTridiagonal)
+eigmax(A::Union{Hermitian{var"#s861", var"#s860"}, Hermitian{Complex{var"#s861"}, var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861"<:Real, var"#s860"<:(StridedMatrix{T} where T)})
+eigmax(A::Union{Number, AbstractMatrix}; permute, scale)
+eigmin(A::SymTridiagonal)
+eigmin(A::Union{Hermitian{var"#s861", var"#s860"}, Hermitian{Complex{var"#s861"}, var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861"<:Real, var"#s860"<:(StridedMatrix{T} where T)})
+eigmin(A::Union{Number, AbstractMatrix}; permute, scale)
+eigvals!(A::Hermitian{T, S}, B::Hermitian{T, S}) where {T<:Union{ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+eigvals!(A::StridedMatrix{T}, B::StridedMatrix{T}; sortby) where T<:Union{ComplexF32, ComplexF64}
+eigvals!(A::StridedMatrix{T}, B::StridedMatrix{T}; sortby) where T<:Union{Float32, Float64}
+eigvals!(A::StridedMatrix{var"#s858"} where var"#s858"<:Union{Float32, Float64}; permute, scale, sortby)
+eigvals!(A::StridedMatrix{var"#s859"} where var"#s859"<:Union{ComplexF32, ComplexF64}; permute, scale, sortby)
+eigvals!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}})
+eigvals!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}}, irange::UnitRange)
+eigvals!(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}}, vl::Real, vu::Real)
+eigvals!(A::Union{Hermitian{T, S}, Symmetric{T, S}}, B::Union{Hermitian{T, S}, Symmetric{T, S}}) where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)}
+eigvals!(A::Union{Hermitian{T, var"#s861"}, Hermitian{Complex{T}, var"#s861"}, Symmetric{T, var"#s861"}} where var"#s861"<:(StridedMatrix{T} where T), vl::Real, vh::Real) where T<:Union{Float32, Float64}
+eigvals!(A::Union{Hermitian{var"#s861", var"#s860"}, Hermitian{Complex{var"#s861"}, var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861"<:Union{Float32, Float64}, var"#s860"<:(StridedMatrix{T} where T)})
+eigvals!(A::Union{Hermitian{var"#s861", var"#s860"}, Hermitian{Complex{var"#s861"}, var"#s860"}, Symmetric{var"#s861", var"#s860"}} where {var"#s861"<:Union{Float32, Float64}, var"#s860"<:(StridedMatrix{T} where T)}, irange::UnitRange)
+eigvals(A::AbstractMatrix{TA}, B::AbstractMatrix{TB}; kws...) where {TA, TB}
+eigvals(A::AbstractMatrix{T}; kws...) where T
+eigvals(A::LinearAlgebra.AbstractTriangular)
+eigvals(A::SymTridiagonal{T, V} where V<:AbstractVector{T}) where T
+eigvals(A::SymTridiagonal{T, V} where V<:AbstractVector{T}, irange::UnitRange) where T
+eigvals(A::SymTridiagonal{T, V} where V<:AbstractVector{T}, vl::Real, vu::Real) where T
+eigvals(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S})
+eigvals(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, irange::UnitRange)
+eigvals(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}, vl::Real, vh::Real)
+eigvals(D::Diagonal; permute, scale)
+eigvals(D::Diagonal{var"#s859", V} where {var"#s859"<:Number, V<:AbstractVector{var"#s859"}}; permute, scale)
+eigvals(F::Union{Eigen, GeneralizedEigen})
+eigvals(M::Bidiagonal)
+eigvals(x::Number; kwargs...)
+eigvecs(A::AbstractMatrix, B::AbstractMatrix; kws...)
+eigvecs(A::LinearAlgebra.AbstractTriangular{T}) where T
+eigvecs(A::LowerTriangular{<:Union{Float32, Float64, ComplexF32, ComplexF64}, <:StridedMatrix{T} where T})
+eigvecs(A::SymTridiagonal)
+eigvecs(A::SymTridiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64}, V<:AbstractVector{var"#s861"}}, eigvals::Vector{<:Real})
+eigvecs(A::Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S})
+eigvecs(A::Union{Number, AbstractMatrix}; kws...)
+eigvecs(A::UnitLowerTriangular{<:Union{Float32, Float64, ComplexF32, ComplexF64}, <:StridedMatrix{T} where T})
+eigvecs(A::UnitUpperTriangular{<:Union{Float32, Float64, ComplexF32, ComplexF64}, <:StridedMatrix{T} where T})
+eigvecs(A::UpperTriangular{<:Union{Float32, Float64, ComplexF32, ComplexF64}, <:StridedMatrix{T} where T})
+eigvecs(D::Diagonal)
+eigvecs(F::Union{Eigen, GeneralizedEigen})
+eigvecs(M::Bidiagonal{T, V} where V<:AbstractVector{T}) where T
+factorize(A::Adjoint)
+factorize(A::Bidiagonal)
+factorize(A::LinearAlgebra.AbstractTriangular)
+factorize(A::StridedMatrix{T}) where T
+factorize(A::Transpose)
+factorize(A::Tridiagonal)
+factorize(A::Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S})
+factorize(D::Diagonal)
+factorize(S::SymTridiagonal)
+givens(A::AbstractMatrix, i1::Integer, i2::Integer, j::Integer)
+givens(f::T, g::T, i1::Integer, i2::Integer) where T
+givens(x::AbstractVector, i1::Integer, i2::Integer)
+hessenberg!(A::StridedMatrix{var"#s861"} where var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64})
+hessenberg!(A::Union{Hermitian{var"#s860", S} where {var"#s860"<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:(AbstractMatrix{<:var"#s860"})}, Symmetric{var"#s861", S} where {var"#s861"<:Union{Float32, Float64}, S<:(AbstractMatrix{<:var"#s861"})}})
+hessenberg(A::AbstractMatrix{T}) where T
+isdiag(::UniformScaling)
+isdiag(A::AbstractMatrix)
+isdiag(D::Diagonal)
+isdiag(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+isdiag(M::Bidiagonal)
+isdiag(M::SymTridiagonal)
+isdiag(M::Tridiagonal)
+isdiag(x::Number)
+ishermitian(A::AbstractMatrix)
+ishermitian(A::BitMatrix)
+ishermitian(A::Hermitian)
+ishermitian(A::Symmetric{var"#s861", S} where {var"#s861"<:Complex, S<:(AbstractMatrix{<:var"#s861"})})
+ishermitian(A::Symmetric{var"#s861", S} where {var"#s861"<:Real, S<:(AbstractMatrix{<:var"#s861"})})
+ishermitian(B::BunchKaufman{T}) where T
+ishermitian(D::Diagonal)
+ishermitian(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+ishermitian(D::Diagonal{var"#s861", V} where {var"#s861"<:Real, V<:AbstractVector{var"#s861"}})
+ishermitian(J::UniformScaling)
+ishermitian(S::SymTridiagonal)
+ishermitian(S::Tridiagonal)
+ishermitian(x::Number)
+isposdef!(A::AbstractMatrix)
+isposdef(A::AbstractMatrix)
+isposdef(A::Union{Eigen, GeneralizedEigen})
+isposdef(C::Union{Cholesky, CholeskyPivoted})
+isposdef(D::Diagonal)
+isposdef(J::UniformScaling)
+isposdef(x::Number)
+issuccess(B::BunchKaufman)
+issuccess(C::Union{Cholesky, CholeskyPivoted})
+issuccess(F::LU)
+issymmetric(::UniformScaling)
+issymmetric(A::AbstractMatrix)
+issymmetric(A::AbstractMatrix{<:Real})
+issymmetric(A::BitMatrix)
+issymmetric(A::Hermitian{var"#s861", S} where {var"#s861"<:Complex, S<:(AbstractMatrix{<:var"#s861"})})
+issymmetric(A::Hermitian{var"#s861", S} where {var"#s861"<:Real, S<:(AbstractMatrix{<:var"#s861"})})
+issymmetric(A::Symmetric)
+issymmetric(B::BunchKaufman)
+issymmetric(D::Diagonal)
+issymmetric(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+issymmetric(S::SymTridiagonal)
+issymmetric(S::Tridiagonal)
+issymmetric(x::Number)
+istril(::UniformScaling)
+istril(A::AbstractMatrix)
+istril(A::AbstractMatrix, k::Integer)
+istril(A::Adjoint)
+istril(A::BitMatrix)
+istril(A::Transpose)
+istril(A::Union{LowerTriangular, UnitLowerTriangular})
+istril(A::Union{LowerTriangular, UnitLowerTriangular}, k::Integer)
+istril(D::Diagonal)
+istril(D::Diagonal, k::Integer)
+istril(M::Bidiagonal)
+istril(M::Bidiagonal, k::Integer)
+istril(M::SymTridiagonal, k::Integer)
+istril(M::Tridiagonal)
+istril(M::Tridiagonal, k::Integer)
+istril(x::Number)
+istriu(::UniformScaling)
+istriu(A::AbstractMatrix)
+istriu(A::AbstractMatrix, k::Integer)
+istriu(A::Adjoint)
+istriu(A::BitMatrix)
+istriu(A::Transpose)
+istriu(A::Union{UnitUpperTriangular, UpperTriangular})
+istriu(A::Union{UnitUpperTriangular, UpperTriangular}, k::Integer)
+istriu(D::Diagonal)
+istriu(D::Diagonal, k::Integer)
+istriu(M::Bidiagonal)
+istriu(M::Bidiagonal, k::Integer)
+istriu(M::SymTridiagonal)
+istriu(M::SymTridiagonal, k::Integer)
+istriu(M::Tridiagonal)
+istriu(M::Tridiagonal, k::Integer)
+istriu(x::Number)
+kron(A::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}}, B::Diagonal{var"#s860", V} where {var"#s860"<:Number, V<:AbstractVector{var"#s860"}})
+kron(a::AbstractMatrix, b::AbstractVector)
+kron(a::AbstractMatrix{T}, b::AbstractMatrix{S}) where {T, S}
+kron(a::AbstractVecOrMat, b::Number)
+kron(a::AbstractVector, b::AbstractMatrix)
+kron(a::AbstractVector, b::AbstractVector)
+kron(a::Adjoint{T, <:AbstractVector} where T, b::Adjoint{T, <:AbstractVector} where T)
+kron(a::BitMatrix, b::BitMatrix)
+kron(a::BitVector, b::BitVector)
+kron(a::Number, b::Union{Number, AbstractVecOrMat})
+kron(a::Union{Adjoint{T, var"#s861"}, Transpose{T, var"#s861"}} where {T, var"#s861"<:(AbstractVector)}, b::Union{Adjoint{T, var"#s861"}, Transpose{T, var"#s861"}} where {T, var"#s861"<:(AbstractVector)})
+ldiv!(A::Adjoint{<:Any, <:Bidiagonal}, b::AbstractVector)
+ldiv!(A::LQ, B::StridedVecOrMat)
+ldiv!(A::LU{<:Any, <:StridedMatrix{T} where T}, B::StridedVecOrMat)
+ldiv!(A::LU{T, <:StridedMatrix{T} where T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::LU{T, Tridiagonal{T, V}}, B::AbstractVecOrMat) where {T, V}
+ldiv!(A::LinearAlgebra.QRCompactWY{T, M} where M<:AbstractMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::LinearAlgebra.QRCompactWY{T, M} where M<:AbstractMatrix{T}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+ldiv!(A::LowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::LowerTriangular{T, <:StridedMatrix{T} where T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::QR, B::StridedVector{T} where T)
+ldiv!(A::QRPivoted, B::StridedMatrix{T} where T)
+ldiv!(A::QRPivoted, b::StridedVector{T} where T)
+ldiv!(A::QRPivoted{T, S} where S<:AbstractMatrix{T}, B::StridedMatrix{T}, rcond::Real) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::QRPivoted{T, S} where S<:AbstractMatrix{T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::QRPivoted{T, S} where S<:AbstractMatrix{T}, B::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::QR{T, S} where S<:AbstractMatrix{T}, B::StridedMatrix{T}) where T
+ldiv!(A::SVD{T, Tr, M} where {Tr, M<:(AbstractArray{T})}, B::StridedVecOrMat) where T
+ldiv!(A::SymTridiagonal, B::AbstractVecOrMat; shift)
+ldiv!(A::Transpose{<:Any, <:Bidiagonal}, b::AbstractVector)
+ldiv!(A::Union{LinearAlgebra.AbstractTriangular, Bidiagonal}, B::AbstractMatrix)
+ldiv!(A::Union{LinearAlgebra.AbstractTriangular, Bidiagonal}, b::AbstractVector)
+ldiv!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+ldiv!(A::UnitLowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::UnitLowerTriangular{T, <:StridedMatrix{T} where T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+ldiv!(A::UnitUpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::UnitUpperTriangular{T, <:StridedMatrix{T} where T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+ldiv!(A::UpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(A::UpperTriangular{T, <:StridedMatrix{T} where T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(B::BunchKaufman{T}, R::StridedVecOrMat{S}) where {T, S}
+ldiv!(B::BunchKaufman{T}, R::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(B::BunchKaufman{T}, R::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+ldiv!(C::Cholesky, B::StridedVecOrMat)
+ldiv!(C::CholeskyPivoted, B::StridedMatrix{T} where T)
+ldiv!(C::CholeskyPivoted, B::StridedVector{T} where T)
+ldiv!(C::CholeskyPivoted{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(C::CholeskyPivoted{T}, B::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(C::Cholesky{T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(D::Diagonal, A::Union{LowerTriangular, UpperTriangular})
+ldiv!(D::Diagonal, B::AbstractVecOrMat)
+ldiv!(F::Adjoint{<:Any, <:Hessenberg}, B::AbstractVecOrMat)
+ldiv!(F::Hessenberg, B::AbstractVecOrMat)
+ldiv!(F::Hessenberg{<:Complex, <:Any, <:AbstractMatrix{<:Real}}, B::AbstractVecOrMat{<:Complex})
+ldiv!(F::UpperHessenberg, B::AbstractVecOrMat; shift)
+ldiv!(Fadj::Adjoint{<:Any, <:LQ}, B::StridedVecOrMat)
+ldiv!(Fadj::Adjoint{<:Any, <:Union{QR, LinearAlgebra.QRCompactWY, QRPivoted}}, B::AbstractVecOrMat)
+ldiv!(J::UniformScaling, B::AbstractVecOrMat)
+ldiv!(S::LDLt{<:Any, <:SymTridiagonal}, B::AbstractVecOrMat)
+ldiv!(Y::AbstractArray, A::AbstractMatrix, B::AbstractArray)
+ldiv!(Y::AbstractArray, s::Number, X::AbstractArray)
+ldiv!(Y::AbstractVecOrMat, A::Factorization, B::AbstractVecOrMat)
+ldiv!(Y::AbstractVecOrMat, J::UniformScaling, B::AbstractVecOrMat)
+ldiv!(adjA::Adjoint{<:Any, <:LU{<:Any, <:StridedMatrix{T} where T}}, B::StridedVecOrMat)
+ldiv!(adjA::Adjoint{<:Any, <:Union{LinearAlgebra.AbstractTriangular, Bidiagonal}}, B::AbstractMatrix)
+ldiv!(adjA::Adjoint{<:Any, LU{T, Tridiagonal{T, V}}}, B::AbstractVecOrMat) where {T, V}
+ldiv!(adjA::Adjoint{T, <:LU{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+ldiv!(adjD::Adjoint{<:Any, <:Diagonal}, B::AbstractVecOrMat)
+ldiv!(adjF::Adjoint{T, <:LU{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Real
+ldiv!(s::Number, X::AbstractArray)
+ldiv!(transA::Transpose{<:Any, <:LU{<:Any, <:StridedMatrix{T} where T}}, B::StridedVecOrMat)
+ldiv!(transA::Transpose{<:Any, <:LU{T, Tridiagonal{T, V}}}, B::AbstractVecOrMat) where {T, V}
+ldiv!(transA::Transpose{<:Any, <:Union{LinearAlgebra.AbstractTriangular, Bidiagonal}}, B::AbstractMatrix)
+ldiv!(transA::Transpose{T, <:LU{T, <:StridedMatrix{T} where T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+ldiv!(transD::Transpose{<:Any, <:Diagonal}, B::AbstractVecOrMat)
+ldiv!(x::AbstractArray, A::Diagonal, b::AbstractArray)
+ldiv!(xA::LowerTriangular{<:Any, <:Adjoint}, b::AbstractVector)
+ldiv!(xA::LowerTriangular{<:Any, <:Adjoint}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::LowerTriangular{<:Any, <:Transpose}, b::AbstractVector)
+ldiv!(xA::LowerTriangular{<:Any, <:Transpose}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::Union{LowerTriangular, UnitLowerTriangular}, B::LowerTriangular)
+ldiv!(xA::Union{UnitUpperTriangular, UpperTriangular}, B::UpperTriangular)
+ldiv!(xA::UnitLowerTriangular{<:Any, <:Adjoint}, b::AbstractVector)
+ldiv!(xA::UnitLowerTriangular{<:Any, <:Adjoint}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::UnitLowerTriangular{<:Any, <:Transpose}, b::AbstractVector)
+ldiv!(xA::UnitLowerTriangular{<:Any, <:Transpose}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::UnitUpperTriangular{<:Any, <:Adjoint}, b::AbstractVector)
+ldiv!(xA::UnitUpperTriangular{<:Any, <:Adjoint}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::UnitUpperTriangular{<:Any, <:Transpose}, b::AbstractVector)
+ldiv!(xA::UnitUpperTriangular{<:Any, <:Transpose}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::UpperTriangular{<:Any, <:Adjoint}, b::AbstractVector)
+ldiv!(xA::UpperTriangular{<:Any, <:Adjoint}, b::AbstractVector, x::AbstractVector)
+ldiv!(xA::UpperTriangular{<:Any, <:Transpose}, b::AbstractVector)
+ldiv!(xA::UpperTriangular{<:Any, <:Transpose}, b::AbstractVector, x::AbstractVector)
+ldlt!(S::SymTridiagonal{T, V}) where {T, V}
+ldlt(M::SymTridiagonal{T, V} where V<:AbstractVector{T}; shift) where T
+lmul!(A::Diagonal, B::Diagonal)
+lmul!(A::LQ, B::StridedVecOrMat)
+lmul!(A::LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::LinearAlgebra.QRCompactWYQ{T, S}, B::StridedVecOrMat{T}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+lmul!(A::LinearAlgebra.QRPackedQ, B::AbstractVecOrMat)
+lmul!(A::LinearAlgebra.QRPackedQ{T, S}, B::StridedVecOrMat{T}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+lmul!(A::LowerTriangular, B::StridedVecOrMat)
+lmul!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64}
+lmul!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64}
+lmul!(A::LowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::LowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::LowerTriangular{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::LowerTriangular{T, <:StridedMatrix{T} where T}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::Tridiagonal, B::LinearAlgebra.AbstractTriangular)
+lmul!(A::Union{LowerTriangular, UnitLowerTriangular}, B::LowerTriangular)
+lmul!(A::Union{UnitUpperTriangular, UpperTriangular}, B::UpperTriangular)
+lmul!(A::UnitLowerTriangular, B::StridedVecOrMat)
+lmul!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64}
+lmul!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64}
+lmul!(A::UnitLowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitLowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitLowerTriangular{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitLowerTriangular{T, <:StridedMatrix{T} where T}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular, B::StridedVecOrMat)
+lmul!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64}
+lmul!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64}
+lmul!(A::UnitUpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UnitUpperTriangular{T, <:StridedMatrix{T} where T}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular, B::StridedVecOrMat)
+lmul!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64}
+lmul!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64}
+lmul!(A::UpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(A::UpperTriangular{T, <:StridedMatrix{T} where T}, b::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(D::Diagonal, B::AbstractVecOrMat)
+lmul!(D::Diagonal, B::UnitLowerTriangular)
+lmul!(D::Diagonal, B::UnitUpperTriangular)
+lmul!(G::LinearAlgebra.Givens, A::AbstractVecOrMat)
+lmul!(G::LinearAlgebra.Givens, R::LinearAlgebra.Rotation)
+lmul!(J::UniformScaling, B::AbstractVecOrMat)
+lmul!(Q::LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, false}, X::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(Q::LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, true}, X::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(Q::LinearAlgebra.HessenbergQ{T}, X::Adjoint{T, <:StridedVecOrMat{T}}) where T
+lmul!(R::LinearAlgebra.Rotation, A::AbstractMatrix)
+lmul!(adjA::Adjoint{<:Any, <:Diagonal}, B::AbstractMatrix)
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}}, B::StridedVecOrMat{T}) where T<:Union{ComplexF32, ComplexF64}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}}, B::StridedVecOrMat{T}) where T<:Union{Float32, Float64}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.QRCompactWYQ{T, S}}, B::StridedVecOrMat{T}) where {T<:Union{ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.QRCompactWYQ{T, S}}, B::StridedVecOrMat{T}) where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ{T, S}}, B::StridedVecOrMat{T}) where {T<:Union{ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ{T, S}}, B::StridedVecOrMat{T}) where {T<:Union{Float32, Float64}, S<:(StridedMatrix{T} where T)}
+lmul!(adjA::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ}, B::AbstractVecOrMat)
+lmul!(adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, false}}, X::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, true}}, X::StridedVecOrMat{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lmul!(adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T}}, X::Adjoint{T, <:StridedVecOrMat{T}}) where T
+lmul!(c::Number, A::Union{LowerTriangular, UpperTriangular})
+lmul!(s::Number, X::AbstractArray)
+lmul!(transA::Transpose{<:Any, <:Diagonal}, B::AbstractMatrix)
+lmul!(x::Number, H::UpperHessenberg)
+lmul!(x::T, F::Hessenberg{<:Any, <:SymTridiagonal{T, V} where V<:AbstractVector{T}}) where T<:Number
+lmul!(x::T, F::Hessenberg{<:Any, <:UpperHessenberg{T, S} where S<:AbstractMatrix{T}}) where T<:Number
+lmul!(xA::LowerTriangular{<:Any, <:Adjoint}, B::StridedVecOrMat)
+lmul!(xA::LowerTriangular{<:Any, <:Transpose}, B::StridedVecOrMat)
+lmul!(xA::UnitLowerTriangular{<:Any, <:Adjoint}, B::StridedVecOrMat)
+lmul!(xA::UnitLowerTriangular{<:Any, <:Transpose}, B::StridedVecOrMat)
+lmul!(xA::UnitUpperTriangular{<:Any, <:Adjoint}, B::StridedVecOrMat)
+lmul!(xA::UnitUpperTriangular{<:Any, <:Transpose}, B::StridedVecOrMat)
+lmul!(xA::UpperTriangular{<:Any, <:Adjoint}, B::StridedVecOrMat)
+lmul!(xA::UpperTriangular{<:Any, <:Transpose}, B::StridedVecOrMat)
+logabsdet(A::AbstractMatrix)
+logabsdet(A::Diagonal)
+logabsdet(A::SymTridiagonal; shift)
+logabsdet(A::Union{LowerTriangular{T, S} where S<:AbstractMatrix{T}, UpperTriangular{T, S} where S<:AbstractMatrix{T}}) where T
+logabsdet(A::UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}) where T
+logabsdet(A::UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}) where T
+logabsdet(F::BunchKaufman)
+logabsdet(F::Hessenberg)
+logabsdet(F::LDLt{<:Any, <:SymTridiagonal})
+logabsdet(F::LU{T, S} where S<:AbstractMatrix{T}) where T
+logabsdet(F::UpperHessenberg; shift)
+logdet(A)
+logdet(A::AbstractMatrix)
+logdet(A::UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}) where T
+logdet(A::UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}) where T
+logdet(C::Cholesky)
+logdet(C::CholeskyPivoted)
+logdet(D::Diagonal{var"#s861", V} where {var"#s861"<:Complex, V<:AbstractVector{var"#s861"}})
+logdet(F::Factorization)
+logdet(F::Hessenberg)
+lowrankdowndate!(C::Cholesky, v::AbstractVector)
+lowrankdowndate(C::Cholesky, v::AbstractVector)
+lowrankupdate!(C::Cholesky, v::AbstractVector)
+lowrankupdate(C::Cholesky, v::AbstractVector)
+lq!(A::StridedMatrix{var"#s861"} where var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64})
+lq(A::AbstractMatrix{T}) where T
+lq(x::Number)
+lu!(A::StridedMatrix{T} where T)
+lu!(A::StridedMatrix{T} where T, pivot::Union{NoPivot, RowMaximum}; check)
+lu!(A::StridedMatrix{T}, ::RowMaximum; check) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lu!(A::StridedMatrix{var"#s859"} where var"#s859"<:Union{Float32, Float64, ComplexF32, ComplexF64}, pivot::NoPivot; check)
+lu!(A::StridedMatrix{var"#s859"} where var"#s859"<:Union{Float32, Float64, ComplexF32, ComplexF64}; check)
+lu!(A::Tridiagonal{T, V}) where {T, V}
+lu!(A::Tridiagonal{T, V}, pivot::Union{NoPivot, RowMaximum}; check) where {T, V}
+lu!(A::Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S})
+lu!(A::Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S}, pivot::Union{NoPivot, RowMaximum}; check)
+lu!(A::Union{Tridiagonal, Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S}, StridedMatrix}, ::Val{false}; check)
+lu!(A::Union{Tridiagonal, Union{Hermitian{T, S}, Symmetric{T, S}} where {T, S}, StridedMatrix}, ::Val{true}; check)
+lu(A::AbstractMatrix, ::Val{false}; check)
+lu(A::AbstractMatrix, ::Val{true}; check)
+lu(A::AbstractMatrix{T}) where T
+lu(A::AbstractMatrix{T}, pivot::Union{NoPivot, RowMaximum}; check) where T
+lu(S::LU)
+lu(x::Number; check)
+lyap(A::StridedMatrix{T}, C::StridedMatrix{T}) where T<:Integer
+lyap(A::StridedMatrix{T}, C::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+lyap(a::Union{Real, Complex}, c::Union{Real, Complex})
+mul!(A::LowerTriangular, B::LowerTriangular, C::Number, alpha::Number, beta::Number)
+mul!(A::LowerTriangular, B::Number, C::LowerTriangular, alpha::Number, beta::Number)
+mul!(A::LowerTriangular, B::Number, C::UnitLowerTriangular, alpha::Number, beta::Number)
+mul!(A::LowerTriangular, B::UnitLowerTriangular, C::Number, alpha::Number, beta::Number)
+mul!(A::StridedVecOrMat, B::SymTridiagonal, C::StridedVecOrMat, alpha::Number, beta::Number)
+mul!(A::UpperTriangular, B::Number, C::UnitUpperTriangular, alpha::Number, beta::Number)
+mul!(A::UpperTriangular, B::Number, C::UpperTriangular, alpha::Number, beta::Number)
+mul!(A::UpperTriangular, B::UnitUpperTriangular, C::Number, alpha::Number, beta::Number)
+mul!(A::UpperTriangular, B::UpperTriangular, C::Number, alpha::Number, beta::Number)
+mul!(C, A, B)
+mul!(C::AbstractArray, X::AbstractArray, s::Number, alpha::Number, beta::Number)
+mul!(C::AbstractArray, s::Number, X::AbstractArray, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::AbstractMatrix, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::AbstractMatrix, J::UniformScaling, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::AbstractVecOrMat, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::AbstractVecOrMat, adjB::Adjoint{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::AbstractVecOrMat, transB::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:AbstractVecOrMat}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, B::Adjoint{<:Any, <:Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, B::Adjoint{<:Any, <:Union{Hermitian{T, S}, Symmetric{T, S}, Symmetric{Complex{T}, S}} where {T<:Real, S}})
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, B::Adjoint{<:Any, <:Union{Hermitian{T, S}, Symmetric{T, S}, Symmetric{Complex{T}, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, B::Adjoint{<:Any, <:Union{Hermitian{T, S}, Symmetric{T, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Adjoint{<:Any, <:LinearAlgebra.AbstractTriangular}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Diagonal, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, B::AbstractVecOrMat)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, B::Adjoint{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, B::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, B::Tridiagonal, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, adjB::Adjoint{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractMatrix, A::LinearAlgebra.AbstractTriangular, transB::Transpose{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractMatrix, A::SymTridiagonal, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:AbstractVecOrMat}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, B::Transpose{<:Any, <:Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}})
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, B::Transpose{<:Any, <:Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, B::Transpose{<:Any, <:Union{Hermitian{T, S}, Symmetric{T, S}, Symmetric{Complex{T}, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, B::Transpose{<:Any, <:Union{Hermitian{T, S}, Symmetric{T, S}} where {T<:Real, S}}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Transpose{<:Any, <:LinearAlgebra.AbstractTriangular}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Tridiagonal, B::LinearAlgebra.AbstractTriangular, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::Adjoint{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, adjA::Adjoint{<:Any, <:AbstractVecOrMat}, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, adjA::Adjoint{<:Any, <:AbstractVecOrMat}, adjB::Adjoint{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, adjA::Adjoint{<:Any, <:AbstractVecOrMat}, transB::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, transA::Transpose{<:Any, <:AbstractVecOrMat}, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, transA::Transpose{<:Any, <:AbstractVecOrMat}, transB::Adjoint{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractMatrix, transA::Transpose{<:Any, <:AbstractVecOrMat}, transB::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractVecOrMat, A::LinearAlgebra.AbstractTriangular, B::AbstractVecOrMat)
+mul!(C::AbstractVecOrMat, A::LinearAlgebra.AbstractTriangular, adjB::Adjoint{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractVecOrMat, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractVecOrMat, J::UniformScaling, B::AbstractVecOrMat, alpha::Number, beta::Number)
+mul!(C::AbstractVector, A::AbstractVecOrMat, transB::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::AbstractVector, A::LinearAlgebra.AbstractTriangular, B::AbstractVector)
+mul!(C::AbstractVector, A::LinearAlgebra.AbstractTriangular, transB::Transpose{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractVector, A::LinearAlgebra.AbstractTriangular{<:Any, <:Adjoint}, B::Transpose{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractVector, A::LinearAlgebra.AbstractTriangular{<:Any, <:Transpose}, B::Transpose{<:Any, <:AbstractVecOrMat})
+mul!(C::AbstractVector, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::AbstractVector, alpha::Number, beta::Number)
+mul!(C::AbstractVector, A::Union{Bidiagonal, SymTridiagonal, Tridiagonal}, B::Transpose{<:Any, <:AbstractVecOrMat}, alpha::Number, beta::Number)
+mul!(C::LowerTriangular, A::LowerTriangular, B::LowerTriangular)
+mul!(C::LowerTriangular, A::LowerTriangular, B::LowerTriangular, alpha::Number, beta::Number)
+mul!(C::LowerTriangular, A::LowerTriangular, B::UnitLowerTriangular)
+mul!(C::LowerTriangular, A::LowerTriangular, B::UnitLowerTriangular, alpha::Number, beta::Number)
+mul!(C::LowerTriangular, A::UnitLowerTriangular, B::LowerTriangular)
+mul!(C::LowerTriangular, A::UnitLowerTriangular, B::LowerTriangular, alpha::Number, beta::Number)
+mul!(C::StridedMatrix{ComplexF32}, A::StridedVecOrMat{ComplexF32}, B::StridedVecOrMat{Float32}, alpha::Real, beta::Real)
+mul!(C::StridedMatrix{ComplexF32}, A::StridedVecOrMat{ComplexF32}, transB::Transpose{<:Any, <:StridedVecOrMat{Float32}}, alpha::Real, beta::Real)
+mul!(C::StridedMatrix{ComplexF64}, A::StridedVecOrMat{ComplexF64}, B::StridedVecOrMat{Float64}, alpha::Real, beta::Real)
+mul!(C::StridedMatrix{ComplexF64}, A::StridedVecOrMat{ComplexF64}, transB::Transpose{<:Any, <:StridedVecOrMat{Float64}}, alpha::Real, beta::Real)
+mul!(C::StridedMatrix{T}, A::Hermitian{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}, α::Number, β::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::Hermitian{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}, α::Number, β::Number) where T<:Union{Float32, Float64}
+mul!(C::StridedMatrix{T}, A::StridedMatrix{T}, B::Hermitian{T, <:StridedMatrix{T} where T}, α::Number, β::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::StridedMatrix{T}, B::Hermitian{T, <:StridedMatrix{T} where T}, α::Number, β::Number) where T<:Union{Float32, Float64}
+mul!(C::StridedMatrix{T}, A::StridedMatrix{T}, B::Symmetric{T, <:StridedMatrix{T} where T}, α::Number, β::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::StridedVecOrMat{T}, B::StridedVecOrMat{T}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:StridedVecOrMat{<:Union{Float32, Float64}}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::StridedVecOrMat{T}, transB::Transpose{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, A::Symmetric{T, <:StridedMatrix{T} where T}, B::StridedMatrix{T}, α::Number, β::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, B::StridedVecOrMat{T}, alpha::Number, beta::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, B::StridedVecOrMat{T}, alpha::Real, beta::Real) where T<:Union{Float32, Float64}
+mul!(C::StridedMatrix{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, adjB::Adjoint{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, transB::Transpose{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, transA::Transpose{<:Any, <:StridedVecOrMat{T}}, B::StridedVecOrMat{T}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, transA::Transpose{<:Any, <:StridedVecOrMat{T}}, transB::Adjoint{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedMatrix{T}, transA::Transpose{<:Any, <:StridedVecOrMat{T}}, transB::Transpose{<:Any, <:StridedVecOrMat{T}}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(C::StridedVecOrMat{T}, A::StridedVecOrMat{T}, Q::LinearAlgebra.AbstractQ{T}) where T
+mul!(C::StridedVecOrMat{T}, A::StridedVecOrMat{T}, adjQ::Adjoint{<:Any, <:LinearAlgebra.AbstractQ{T}}) where T
+mul!(C::StridedVecOrMat{T}, Q::LinearAlgebra.AbstractQ{T}, B::StridedVecOrMat{T}) where T
+mul!(C::StridedVecOrMat{T}, adjQ::Adjoint{<:Any, <:LinearAlgebra.AbstractQ{T}}, B::StridedVecOrMat{T}) where T
+mul!(C::UnitLowerTriangular, A::UnitLowerTriangular, B::UnitLowerTriangular)
+mul!(C::UnitLowerTriangular, A::UnitLowerTriangular, B::UnitLowerTriangular, alpha::Number, beta::Number)
+mul!(C::UnitUpperTriangular, A::UnitUpperTriangular, B::UnitUpperTriangular)
+mul!(C::UnitUpperTriangular, A::UnitUpperTriangular, B::UnitUpperTriangular, alpha::Number, beta::Number)
+mul!(C::UpperTriangular, A::UnitUpperTriangular, B::UpperTriangular)
+mul!(C::UpperTriangular, A::UnitUpperTriangular, B::UpperTriangular, alpha::Number, beta::Number)
+mul!(C::UpperTriangular, A::UpperTriangular, B::UnitUpperTriangular)
+mul!(C::UpperTriangular, A::UpperTriangular, B::UnitUpperTriangular, alpha::Number, beta::Number)
+mul!(C::UpperTriangular, A::UpperTriangular, B::UpperTriangular)
+mul!(C::UpperTriangular, A::UpperTriangular, B::UpperTriangular, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, in::StridedMatrix{T} where T, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Adjoint{<:Any, <:Diagonal}, in::Transpose{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Diagonal, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Diagonal, in::StridedMatrix{T} where T, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Diagonal, in::Transpose{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, in::StridedMatrix{T} where T, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::Transpose{<:Any, <:Diagonal}, in::Transpose{<:Any, <:StridedMatrix{T} where T}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, A::UniformScaling, b::Number, α::Number, β::Number)
+mul!(out::AbstractMatrix, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, A::Adjoint{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, A::Diagonal, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::Adjoint{<:Any, <:StridedMatrix{T} where T}, A::Transpose{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::StridedMatrix{T} where T, A::Adjoint{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::StridedMatrix{T} where T, A::Diagonal, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::StridedMatrix{T} where T, A::Transpose{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::Transpose{<:Any, <:StridedMatrix{T} where T}, A::Adjoint{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::Transpose{<:Any, <:StridedMatrix{T} where T}, A::Diagonal, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix, in::Transpose{<:Any, <:StridedMatrix{T} where T}, A::Transpose{<:Any, <:Diagonal}, alpha::Number, beta::Number)
+mul!(out::AbstractMatrix{T}, a::Number, B::UniformScaling, α::Number, β::Number) where T
+mul!(out::AbstractVector, A::Adjoint{<:Any, <:Diagonal}, in::AbstractVector, alpha::Number, beta::Number)
+mul!(out::AbstractVector, A::Diagonal, in::AbstractVector, alpha::Number, beta::Number)
+mul!(out::AbstractVector, A::Transpose{<:Any, <:Diagonal}, in::AbstractVector, alpha::Number, beta::Number)
+mul!(y::AbstractVector, A::AbstractVecOrMat, x::AbstractVector, alpha::Number, beta::Number)
+mul!(y::AbstractVector, adjA::Adjoint{<:Any, <:AbstractVecOrMat}, x::AbstractVector, alpha::Number, beta::Number)
+mul!(y::AbstractVector, transA::Transpose{<:Any, <:AbstractVecOrMat}, x::AbstractVector, alpha::Number, beta::Number)
+mul!(y::StridedVector{ComplexF32}, A::StridedVecOrMat{ComplexF32}, x::StridedVector{Float32}, alpha::Real, beta::Real)
+mul!(y::StridedVector{ComplexF64}, A::StridedVecOrMat{ComplexF64}, x::StridedVector{Float64}, alpha::Real, beta::Real)
+mul!(y::StridedVector{T}, A::Hermitian{T, <:StridedMatrix{T} where T}, x::StridedVector{T}, α::Number, β::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(y::StridedVector{T}, A::Hermitian{T, <:StridedMatrix{T} where T}, x::StridedVector{T}, α::Number, β::Number) where T<:Union{Float32, Float64}
+mul!(y::StridedVector{T}, A::StridedVecOrMat{T}, x::StridedVector{T}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(y::StridedVector{T}, A::Symmetric{T, <:StridedMatrix{T} where T}, x::StridedVector{T}, α::Number, β::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+mul!(y::StridedVector{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, x::StridedVector{T}, alpha::Number, beta::Number) where T<:Union{ComplexF32, ComplexF64}
+mul!(y::StridedVector{T}, adjA::Adjoint{<:Any, <:StridedVecOrMat{T}}, x::StridedVector{T}, alpha::Number, beta::Number) where T<:Union{Float32, Float64}
+mul!(y::StridedVector{T}, transA::Transpose{<:Any, <:StridedVecOrMat{T}}, x::StridedVector{T}, alpha::Number, beta::Number) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+norm(::Missing)
+norm(::Missing, p::Real)
+norm(itr)
+norm(itr, p::Real)
+norm(v::Union{Adjoint{T, <:AbstractVector} where T, Transpose{T, <:AbstractVector} where T}, p::Real)
+norm(x::Number)
+norm(x::Number, p::Real)
+norm(x::StridedVector{T}, rx::Union{AbstractRange{TI}, UnitRange{TI}}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, TI<:Integer}
+normalize!(a::AbstractArray)
+normalize!(a::AbstractArray, p::Real)
+normalize(a::AbstractArray)
+normalize(a::AbstractArray, p::Real)
+nullspace(A::AbstractMatrix, tol::Real)
+nullspace(A::AbstractVecOrMat; atol, rtol)
+nullspace(A::AbstractVector, tol::Real)
+opnorm(A::AbstractMatrix)
+opnorm(A::AbstractMatrix, p::Real)
+opnorm(J::UniformScaling)
+opnorm(J::UniformScaling, p::Real)
+opnorm(v::Adjoint{T, <:AbstractVector} where T)
+opnorm(v::Adjoint{T, <:AbstractVector} where T, q::Real)
+opnorm(v::Transpose{T, <:AbstractVector} where T)
+opnorm(v::Transpose{T, <:AbstractVector} where T, q::Real)
+opnorm(x::Number)
+opnorm(x::Number, p::Real)
+ordschur!(gschur::GeneralizedSchur, select::Union{BitVector, Vector{Bool}})
+ordschur!(schur::Schur, select::Union{BitVector, Vector{Bool}})
+ordschur(gschur::GeneralizedSchur, select::Union{BitVector, Vector{Bool}})
+ordschur(schur::Schur, select::Union{BitVector, Vector{Bool}})
+pinv(A::AbstractMatrix{T}, tol::Real) where T
+pinv(A::AbstractMatrix{T}; atol, rtol) where T
+pinv(D::Diagonal{T, V} where V<:AbstractVector{T}) where T
+pinv(D::Diagonal{T, V} where V<:AbstractVector{T}, tol::Real) where T
+pinv(J::UniformScaling)
+pinv(v::AbstractVector{T}) where T
+pinv(v::AbstractVector{T}) where T<:Complex
+pinv(v::AbstractVector{T}) where T<:Real
+pinv(v::AbstractVector{T}, tol::Real) where T
+pinv(v::AbstractVector{T}, tol::Real) where T<:Complex
+pinv(v::AbstractVector{T}, tol::Real) where T<:Real
+pinv(v::Adjoint{T, <:AbstractVector} where T)
+pinv(v::Adjoint{T, <:AbstractVector} where T, tol::Real)
+pinv(v::Transpose{T, <:AbstractVector} where T)
+pinv(v::Transpose{T, <:AbstractVector} where T, tol::Real)
+pinv(x::Number)
+qr!(A::AbstractMatrix)
+qr!(A::AbstractMatrix, ::ColumnNorm)
+qr!(A::AbstractMatrix, ::NoPivot)
+qr!(A::AbstractMatrix, ::Val{false})
+qr!(A::AbstractMatrix, ::Val{true})
+qr!(A::StridedMatrix{var"#s858"} where var"#s858"<:Union{Float32, Float64, ComplexF32, ComplexF64}, ::NoPivot; blocksize)
+qr!(A::StridedMatrix{var"#s861"} where var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64}, ::ColumnNorm)
+qr(A::AbstractMatrix, ::Val{false}; kwargs...)
+qr(A::AbstractMatrix, ::Val{true}; kwargs...)
+qr(A::AbstractMatrix{T}, arg...; kwargs...) where T
+qr(A::BitMatrix)
+qr(v::AbstractVector)
+qr(x::Number)
+rank(A::AbstractMatrix, tol::Real)
+rank(A::AbstractMatrix; atol, rtol)
+rank(C::CholeskyPivoted)
+rank(x::Number)
+rdiv!(A::AbstractMatrix, D::Diagonal)
+rdiv!(A::AbstractMatrix, J::UniformScaling)
+rdiv!(A::AbstractMatrix, adjD::Adjoint{<:Any, <:Diagonal})
+rdiv!(A::AbstractMatrix, transD::Transpose{<:Any, <:Diagonal})
+rdiv!(A::LowerTriangular, B::Union{LowerTriangular, UnitLowerTriangular})
+rdiv!(A::StridedMatrix{T} where T, B::LowerTriangular)
+rdiv!(A::StridedMatrix{T} where T, B::UnitLowerTriangular)
+rdiv!(A::StridedMatrix{T} where T, B::UnitUpperTriangular)
+rdiv!(A::StridedMatrix{T} where T, B::UpperTriangular)
+rdiv!(A::StridedMatrix{T} where T, xB::LowerTriangular{<:Any, <:Adjoint})
+rdiv!(A::StridedMatrix{T} where T, xB::LowerTriangular{<:Any, <:Transpose})
+rdiv!(A::StridedMatrix{T} where T, xB::UnitLowerTriangular{<:Any, <:Adjoint})
+rdiv!(A::StridedMatrix{T} where T, xB::UnitLowerTriangular{<:Any, <:Transpose})
+rdiv!(A::StridedMatrix{T} where T, xB::UnitUpperTriangular{<:Any, <:Adjoint})
+rdiv!(A::StridedMatrix{T} where T, xB::UnitUpperTriangular{<:Any, <:Transpose})
+rdiv!(A::StridedMatrix{T} where T, xB::UpperTriangular{<:Any, <:Adjoint})
+rdiv!(A::StridedMatrix{T} where T, xB::UpperTriangular{<:Any, <:Transpose})
+rdiv!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rdiv!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::LowerTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rdiv!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitLowerTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rdiv!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UnitUpperTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rdiv!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedMatrix{T}, B::UpperTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rdiv!(A::StridedVecOrMat, B::LU{<:Any, <:StridedMatrix{T} where T})
+rdiv!(A::Union{LowerTriangular, UpperTriangular}, D::Diagonal)
+rdiv!(A::UpperTriangular, B::Union{UnitUpperTriangular, UpperTriangular})
+rdiv!(B::AbstractMatrix, A::Adjoint{<:Any, <:LU})
+rdiv!(B::AbstractMatrix, A::LU)
+rdiv!(B::AbstractMatrix, A::Transpose{<:Any, <:LU})
+rdiv!(B::AbstractMatrix, F::Adjoint{<:Any, <:Hessenberg})
+rdiv!(B::AbstractMatrix, F::Hessenberg)
+rdiv!(B::AbstractMatrix, F::UpperHessenberg; shift)
+rdiv!(B::AbstractVecOrMat, A::SymTridiagonal; shift)
+rdiv!(B::AbstractVecOrMat, S::LDLt{<:Any, <:SymTridiagonal})
+rdiv!(B::AbstractVecOrMat{<:Complex}, F::Hessenberg{<:Complex, <:Any, <:AbstractMatrix{<:Real}})
+rdiv!(B::StridedMatrix{T} where T, C::Cholesky)
+rdiv!(B::StridedMatrix{T} where T, C::CholeskyPivoted)
+rdiv!(X::AbstractArray, s::Number)
+reflect!(x::AbstractVector, y::AbstractVector, c, s)
+rmul!(A::AbstractMatrix, D::Diagonal)
+rmul!(A::AbstractMatrix, G::LinearAlgebra.Givens)
+rmul!(A::AbstractMatrix, J::UniformScaling)
+rmul!(A::AbstractMatrix, adjB::Adjoint{<:Any, <:Diagonal})
+rmul!(A::AbstractMatrix, adjR::Adjoint{<:Any, <:LinearAlgebra.Rotation})
+rmul!(A::AbstractMatrix, transB::Transpose{<:Any, <:Diagonal})
+rmul!(A::Diagonal, B::Diagonal)
+rmul!(A::LinearAlgebra.AbstractTriangular, adjB::Adjoint{<:Any, <:Union{LinearAlgebra.QRCompactWYQ, LinearAlgebra.QRPackedQ}})
+rmul!(A::LowerTriangular, B::Union{LowerTriangular, UnitLowerTriangular})
+rmul!(A::StridedMatrix{T} where T, B::LowerTriangular)
+rmul!(A::StridedMatrix{T} where T, B::LowerTriangular{<:Any, <:Adjoint})
+rmul!(A::StridedMatrix{T} where T, B::LowerTriangular{<:Any, <:Transpose})
+rmul!(A::StridedMatrix{T} where T, B::UnitLowerTriangular)
+rmul!(A::StridedMatrix{T} where T, B::UnitLowerTriangular{<:Any, <:Adjoint})
+rmul!(A::StridedMatrix{T} where T, B::UnitLowerTriangular{<:Any, <:Transpose})
+rmul!(A::StridedMatrix{T} where T, B::UnitUpperTriangular)
+rmul!(A::StridedMatrix{T} where T, B::UnitUpperTriangular{<:Any, <:Adjoint})
+rmul!(A::StridedMatrix{T} where T, B::UnitUpperTriangular{<:Any, <:Transpose})
+rmul!(A::StridedMatrix{T} where T, B::UpperTriangular)
+rmul!(A::StridedMatrix{T} where T, B::UpperTriangular{<:Any, <:Adjoint})
+rmul!(A::StridedMatrix{T} where T, B::UpperTriangular{<:Any, <:Transpose})
+rmul!(A::StridedMatrix{T} where T, Q::LinearAlgebra.QRPackedQ)
+rmul!(A::StridedMatrix{T} where T, adjQ::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ})
+rmul!(A::StridedMatrix{T}, B::LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedMatrix{T}, B::LowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::LowerTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedMatrix{T}, B::UnitLowerTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitLowerTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedMatrix{T}, B::UnitUpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UnitUpperTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Adjoint{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedMatrix{T}, B::UpperTriangular{<:Any, <:Transpose{T, <:StridedMatrix{T} where T}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, B::UpperTriangular{T, <:StridedMatrix{T} where T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedMatrix{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.LQPackedQ{T, S} where S<:AbstractMatrix{T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedVecOrMat{T}, B::LinearAlgebra.QRCompactWYQ{T, S}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+rmul!(A::StridedVecOrMat{T}, B::LinearAlgebra.QRPackedQ{T, S}) where {T<:Union{Float32, Float64, ComplexF32, ComplexF64}, S<:(StridedMatrix{T} where T)}
+rmul!(A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.QRCompactWYQ{T, M} where M<:AbstractMatrix{T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.QRCompactWYQ{T, M} where M<:AbstractMatrix{T}}) where T<:Union{Float32, Float64}
+rmul!(A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ{T, S} where S<:AbstractMatrix{T}}) where T<:Union{ComplexF32, ComplexF64}
+rmul!(A::StridedVecOrMat{T}, adjB::Adjoint{<:Any, <:LinearAlgebra.QRPackedQ{T, S} where S<:AbstractMatrix{T}}) where T<:Union{Float32, Float64}
+rmul!(A::Union{LowerTriangular, UpperTriangular}, D::Diagonal)
+rmul!(A::Union{LowerTriangular, UpperTriangular}, c::Number)
+rmul!(A::UnitLowerTriangular, D::Diagonal)
+rmul!(A::UnitUpperTriangular, D::Diagonal)
+rmul!(A::UpperTriangular, B::Union{UnitUpperTriangular, UpperTriangular})
+rmul!(F::Hessenberg{<:Any, <:SymTridiagonal{T, V} where V<:AbstractVector{T}}, x::T) where T<:Number
+rmul!(F::Hessenberg{<:Any, <:UpperHessenberg{T, S} where S<:AbstractMatrix{T}}, x::T) where T<:Number
+rmul!(H::UpperHessenberg, x::Number)
+rmul!(X::AbstractArray, s::Number)
+rmul!(X::Adjoint{T, <:StridedVecOrMat{T}}, Q::LinearAlgebra.HessenbergQ{T}) where T
+rmul!(X::Adjoint{T, <:StridedVecOrMat{T}}, adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T}}) where T
+rmul!(X::StridedVecOrMat{T}, Q::LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, false}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(X::StridedVecOrMat{T}, Q::LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, true}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(X::StridedVecOrMat{T}, adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, false}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rmul!(X::StridedVecOrMat{T}, adjQ::Adjoint{<:Any, <:LinearAlgebra.HessenbergQ{T, <:StridedMatrix{T}, <:StridedVector{T}, true}}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+rotate!(x::AbstractVector, y::AbstractVector, c, s)
+schur!(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+schur!(A::StridedMatrix{var"#s861"} where var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64})
+schur(A::AbstractMatrix{TA}, B::AbstractMatrix{TB}) where {TA, TB}
+schur(A::AbstractMatrix{T}) where T
+schur(A::Bidiagonal{T, V} where V<:AbstractVector{T}) where T
+schur(A::StridedMatrix{TA}, B::StridedMatrix{TB}) where {TA, TB}
+schur(A::StridedMatrix{T}) where T
+schur(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+schur(A::StridedMatrix{var"#s861"} where var"#s861"<:Union{Float32, Float64, ComplexF32, ComplexF64})
+schur(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S})
+schur(A::Union{LowerTriangular{T, S} where S<:AbstractMatrix{T}, UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}}) where T
+schur(A::Union{UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}, UpperTriangular{T, S} where S<:AbstractMatrix{T}}) where T
+svd!(A::LinearAlgebra.AbstractTriangular; kwargs...)
+svd!(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svd!(A::StridedMatrix{T}; full, alg) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svd!(A::StridedVector{T}; full, alg) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svd!(M::Bidiagonal{var"#s858", V} where {var"#s858"<:Union{Float32, Float64}, V<:AbstractVector{var"#s858"}}; full)
+svd(A::Adjoint; full, alg)
+svd(A::BitMatrix)
+svd(A::LinearAlgebra.AbstractTriangular; kwargs...)
+svd(A::StridedMatrix{TA}, B::StridedMatrix{TB}) where {TA, TB}
+svd(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svd(A::StridedVecOrMat{T}; full, alg) where T
+svd(A::Transpose; full, alg)
+svd(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S}; full)
+svd(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+svd(M::Bidiagonal; kw...)
+svd(x::Integer; full, alg)
+svd(x::Number, y::Number)
+svd(x::Number; full, alg)
+svdvals!(A::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svdvals!(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svdvals!(A::StridedVector{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svdvals!(A::SymTridiagonal)
+svdvals!(A::Union{Hermitian{T, S}, Hermitian{Complex{T}, S}, Symmetric{T, S}} where {T<:Real, S})
+svdvals!(M::Bidiagonal{var"#s861", V} where {var"#s861"<:Union{Float32, Float64}, V<:AbstractVector{var"#s861"}})
+svdvals(A::AbstractMatrix{<:Union{Float32, Float64, ComplexF32, ComplexF64}})
+svdvals(A::AbstractMatrix{T}) where T
+svdvals(A::AbstractVector{<:Union{Float32, Float64, ComplexF32, ComplexF64}})
+svdvals(A::AbstractVector{T}) where T
+svdvals(A::LinearAlgebra.AbstractTriangular; kwargs...)
+svdvals(A::StridedMatrix{TA}, B::StridedMatrix{TB}) where {TA, TB}
+svdvals(A::StridedMatrix{T}, B::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+svdvals(D::Diagonal)
+svdvals(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+svdvals(S::SVD{var"#s861", T, M} where {var"#s861", M<:(AbstractArray{var"#s861"})}) where T
+svdvals(x::Number)
+svdvals(x::Number, y::Number)
+sylvester(A::StridedMatrix{T}, B::StridedMatrix{T}, C::StridedMatrix{T}) where T<:Integer
+sylvester(A::StridedMatrix{T}, B::StridedMatrix{T}, C::StridedMatrix{T}) where T<:Union{Float32, Float64, ComplexF32, ComplexF64}
+sylvester(a::Union{Real, Complex}, b::Union{Real, Complex}, c::Union{Real, Complex})
+tr(A::AbstractMatrix)
+tr(A::Hermitian)
+tr(A::Matrix{T}) where T
+tr(D::Diagonal)
+tr(J::UniformScaling{T}) where T
+tr(x::Number)
+transpose!(A::LowerTriangular)
+transpose!(A::UnitLowerTriangular)
+transpose!(A::UnitUpperTriangular)
+transpose!(A::UpperTriangular)
+transpose!(B::AbstractMatrix, A::AbstractMatrix)
+transpose!(B::AbstractMatrix, A::AbstractVector)
+transpose!(B::AbstractVector, A::AbstractMatrix)
+transpose!(C::BitMatrix, B::BitMatrix)
+transpose(A::AbstractVecOrMat)
+transpose(A::Adjoint{<:Real})
+transpose(A::Hermitian)
+transpose(A::Hermitian{var"#s861", S} where {var"#s861"<:Real, S<:(AbstractMatrix{<:var"#s861"})})
+transpose(A::LowerTriangular)
+transpose(A::Symmetric)
+transpose(A::Transpose)
+transpose(A::UnitLowerTriangular)
+transpose(A::UnitUpperTriangular)
+transpose(A::UpperTriangular)
+transpose(B::Bidiagonal)
+transpose(B::Bidiagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+transpose(B::Union{BitMatrix, BitVector})
+transpose(D::Diagonal)
+transpose(D::Diagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+transpose(F::LU)
+transpose(J::UniformScaling)
+transpose(R::LinearAlgebra.AbstractRotation)
+transpose(S::SymTridiagonal)
+transpose(S::Tridiagonal)
+transpose(S::Tridiagonal{var"#s861", V} where {var"#s861"<:Number, V<:AbstractVector{var"#s861"}})
+transpose(a::AbstractArray)
+tril!(A::LowerTriangular)
+tril!(A::LowerTriangular, k::Integer)
+tril!(A::UnitLowerTriangular)
+tril!(A::UnitLowerTriangular, k::Integer)
+tril!(A::UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}) where T
+tril!(A::UnitUpperTriangular{T, S} where S<:AbstractMatrix{T}, k::Integer) where T
+tril!(A::UpperTriangular)
+tril!(A::UpperTriangular, k::Integer)
+tril!(D::Diagonal)
+tril!(D::Diagonal, k::Integer)
+tril!(M::AbstractMatrix)
+tril!(M::AbstractMatrix, k::Integer)
+tril!(M::Bidiagonal)
+tril!(M::Bidiagonal, k::Integer)
+tril!(M::SymTridiagonal)
+tril!(M::SymTridiagonal, k::Integer)
+tril!(M::Tridiagonal)
+tril!(M::Tridiagonal, k::Integer)
+tril(A::Hermitian)
+tril(A::Hermitian, k::Integer)
+tril(A::Symmetric)
+tril(A::Symmetric, k::Integer)
+tril(B::BitMatrix)
+tril(B::BitMatrix, k::Integer)
+tril(M::AbstractMatrix)
+tril(M::AbstractMatrix, k::Integer)
+tril(M::Matrix, k::Integer)
+triu!(A::LowerTriangular)
+triu!(A::LowerTriangular, k::Integer)
+triu!(A::UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}) where T
+triu!(A::UnitLowerTriangular{T, S} where S<:AbstractMatrix{T}, k::Integer) where T
+triu!(A::UnitUpperTriangular)
+triu!(A::UnitUpperTriangular, k::Integer)
+triu!(A::UpperTriangular)
+triu!(A::UpperTriangular, k::Integer)
+triu!(D::Diagonal)
+triu!(D::Diagonal, k::Integer)
+triu!(M::AbstractMatrix)
+triu!(M::AbstractMatrix, k::Integer)
+triu!(M::Bidiagonal)
+triu!(M::Bidiagonal, k::Integer)
+triu!(M::SymTridiagonal)
+triu!(M::SymTridiagonal, k::Integer)
+triu!(M::Tridiagonal)
+triu!(M::Tridiagonal, k::Integer)
+triu(A::Hermitian)
+triu(A::Hermitian, k::Integer)
+triu(A::Symmetric)
+triu(A::Symmetric, k::Integer)
+triu(B::BitMatrix)
+triu(B::BitMatrix, k::Integer)
+triu(M::AbstractMatrix)
+triu(M::AbstractMatrix, k::Integer)
+triu(M::Matrix, k::Integer)
