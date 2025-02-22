@@ -10,7 +10,9 @@ export function SiteHeader() {
       <div className="container flex h-14 items-center px-4">
         <div className="mr-4 flex">
           <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Julia Standard Library Diff Viewer</span>
+            <span className="font-bold">
+              Julia Standard Library Diff Viewer
+            </span>
           </Link>
         </div>
         <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
