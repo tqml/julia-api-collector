@@ -6,9 +6,6 @@ export type DiffLine = { type: DiffOp; content: string };
 export function computeDiff(oldStr: string, newStr: string) {
   const oldLines = oldStr.split("\n");
   const newLines = newStr.split("\n");
-
-  console.log("Number of lines: ", oldLines.length, newLines.length);
-
   const diff: Array<DiffLine> = [];
 
   const maxLen = Math.max(oldLines.length, newLines.length);
