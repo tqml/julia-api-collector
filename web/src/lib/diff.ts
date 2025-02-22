@@ -22,13 +22,13 @@ export function computeDiff(oldStr: string, newStr: string) {
         const newLine = newLines[i]
 
         if (oldLine === newLine) {
-            diff.push({ type: "normal", content: oldLine || "" })
+            diff.push({ type: " ", content: oldLine || "" })
         } else {
             if (oldLine !== undefined) {
-                diff.push({ type: "delete", content: oldLine })
+                diff.push({ type: "-", content: oldLine })
             }
             if (newLine !== undefined) {
-                diff.push({ type: "add", content: newLine })
+                diff.push({ type: "+", content: newLine })
             }
         }
     }
