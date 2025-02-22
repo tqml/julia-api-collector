@@ -1,689 +1,377 @@
 {
-    "julia": "1.11.2",
-    "methods": [
-        {
-            "name": "cor",
-            "arg_names": [
-                "x",
-                "y"
-            ],
-            "arg_types": [
-                "AbstractVector",
-                "AbstractVector"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cor",
-            "arg_names": [
-                "x",
-                "y"
-            ],
-            "arg_types": [
-                "AbstractVecOrMat",
-                "AbstractVecOrMat"
-            ],
-            "kwarg_names": [
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cor",
-            "arg_names": [
-                "X"
-            ],
-            "arg_types": [
-                "AbstractMatrix"
-            ],
-            "kwarg_names": [
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cor",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "AbstractVector{T}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cov",
-            "arg_names": [
-                "x",
-                "y"
-            ],
-            "arg_types": [
-                "AbstractVector",
-                "AbstractVector"
-            ],
-            "kwarg_names": [
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cov",
-            "arg_names": [
-                "X",
-                "Y"
-            ],
-            "arg_types": [
-                "AbstractVecOrMat",
-                "AbstractVecOrMat"
-            ],
-            "kwarg_names": [
-                "dims",
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cov",
-            "arg_names": [
-                "X"
-            ],
-            "arg_types": [
-                "AbstractMatrix"
-            ],
-            "kwarg_names": [
-                "dims",
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "cov",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "AbstractVector"
-            ],
-            "kwarg_names": [
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "f",
-                "itr"
-            ],
-            "arg_types": [
-                "Number",
-                "Number"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "f",
-                "A"
-            ],
-            "arg_types": [
-                "",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "f",
-                "itr"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "r"
-            ],
-            "arg_types": [
-                "AbstractRange{T}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "A"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean",
-            "arg_names": [
-                "itr"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "mean!",
-            "arg_names": [
-                "R",
-                "A"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "median",
-            "arg_names": [
-                "r"
-            ],
-            "arg_types": [
-                "AbstractRange{<:Real}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "median",
-            "arg_names": [
-                "v"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "median",
-            "arg_names": [
-                "itr"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "median!",
-            "arg_names": [
-                "v"
-            ],
-            "arg_types": [
-                "AbstractVector"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "median!",
-            "arg_names": [
-                "v"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "a"
-            ],
-            "arg_types": [
-                "AbstractRange"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "a"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "x",
-                "y"
-            ],
-            "arg_types": [
-                "Number",
-                "Number"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "AbstractFloat"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Union{Bool, Int128, Int16, Int32, Int64, Int8, UInt128, UInt16, UInt32, UInt64, UInt8}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "middle",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Number"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile",
-            "arg_names": [
-                "v",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractVector",
-                ""
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile",
-            "arg_names": [
-                "itr",
-                "p"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile!",
-            "arg_names": [
-                "v",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractVector",
-                "Real"
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile!",
-            "arg_names": [
-                "q",
-                "v",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "AbstractVector",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile!",
-            "arg_names": [
-                "q",
-                "a",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "AbstractArray",
-                "Union{Tuple{Vararg{Real}}, AbstractArray}"
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile!",
-            "arg_names": [
-                "v",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractVector",
-                "Union{Tuple{Vararg{Real}}, AbstractArray}"
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "quantile!",
-            "arg_names": [
-                "a",
-                "p"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "Union{Tuple{Vararg{Real}}, AbstractArray}"
-            ],
-            "kwarg_names": [
-                "sorted",
-                "alpha",
-                "beta"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "std",
-            "arg_names": [
-                "A"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "corrected",
-                "mean",
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "std",
-            "arg_names": [
-                "iterable"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-                "corrected",
-                "mean"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "stdm",
-            "arg_names": [
-                "A",
-                "m"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "corrected",
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "stdm",
-            "arg_names": [
-                "iterable",
-                "m"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "var",
-            "arg_names": [
-                "v"
-            ],
-            "arg_types": [
-                "AbstractRange"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "var",
-            "arg_names": [
-                "A"
-            ],
-            "arg_types": [
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "corrected",
-                "mean",
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "var",
-            "arg_names": [
-                "iterable"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-                "corrected",
-                "mean"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "varm",
-            "arg_names": [
-                "v",
-                "m"
-            ],
-            "arg_types": [
-                "AbstractRange",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "varm",
-            "arg_names": [
-                "v",
-                "m"
-            ],
-            "arg_types": [
-                "AbstractRange",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "varm",
-            "arg_names": [
-                "A",
-                "m"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                "AbstractArray"
-            ],
-            "kwarg_names": [
-                "corrected",
-                "dims"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "varm",
-            "arg_names": [
-                "A",
-                "m"
-            ],
-            "arg_types": [
-                "AbstractArray",
-                ""
-            ],
-            "kwarg_names": [
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        },
-        {
-            "name": "varm",
-            "arg_names": [
-                "iterable",
-                "m"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-                "corrected"
-            ],
-            "module": "Statistics",
-            "doc": ""
-        }
-    ]
+  "julia": "1.11.2",
+  "methods": [
+    {
+      "name": "cor",
+      "arg_names": ["x", "y"],
+      "arg_types": ["AbstractVector", "AbstractVector"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cor",
+      "arg_names": ["x", "y"],
+      "arg_types": ["AbstractVecOrMat", "AbstractVecOrMat"],
+      "kwarg_names": ["dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cor",
+      "arg_names": ["X"],
+      "arg_types": ["AbstractMatrix"],
+      "kwarg_names": ["dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cor",
+      "arg_names": ["x"],
+      "arg_types": ["AbstractVector{T}"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cov",
+      "arg_names": ["x", "y"],
+      "arg_types": ["AbstractVector", "AbstractVector"],
+      "kwarg_names": ["corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cov",
+      "arg_names": ["X", "Y"],
+      "arg_types": ["AbstractVecOrMat", "AbstractVecOrMat"],
+      "kwarg_names": ["dims", "corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cov",
+      "arg_names": ["X"],
+      "arg_types": ["AbstractMatrix"],
+      "kwarg_names": ["dims", "corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "cov",
+      "arg_names": ["x"],
+      "arg_types": ["AbstractVector"],
+      "kwarg_names": ["corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["f", "itr"],
+      "arg_types": ["Number", "Number"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["f", "A"],
+      "arg_types": ["", "AbstractArray"],
+      "kwarg_names": ["dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["f", "itr"],
+      "arg_types": ["", ""],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["r"],
+      "arg_types": ["AbstractRange{T}"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["A"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": ["dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean",
+      "arg_names": ["itr"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "mean!",
+      "arg_names": ["R", "A"],
+      "arg_types": ["AbstractArray", "AbstractArray"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "median",
+      "arg_names": ["r"],
+      "arg_types": ["AbstractRange{<:Real}"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "median",
+      "arg_names": ["v"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": ["dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "median",
+      "arg_names": ["itr"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "median!",
+      "arg_names": ["v"],
+      "arg_types": ["AbstractVector"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "median!",
+      "arg_names": ["v"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["a"],
+      "arg_types": ["AbstractRange"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["a"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["x", "y"],
+      "arg_types": ["Number", "Number"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["x"],
+      "arg_types": ["AbstractFloat"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["x"],
+      "arg_types": [
+        "Union{Bool, Int128, Int16, Int32, Int64, Int8, UInt128, UInt16, UInt32, UInt64, UInt8}"
+      ],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "middle",
+      "arg_names": ["x"],
+      "arg_types": ["Number"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile",
+      "arg_names": ["v", "p"],
+      "arg_types": ["AbstractVector", ""],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile",
+      "arg_names": ["itr", "p"],
+      "arg_types": ["", ""],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile!",
+      "arg_names": ["v", "p"],
+      "arg_types": ["AbstractVector", "Real"],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile!",
+      "arg_names": ["q", "v", "p"],
+      "arg_types": ["AbstractArray", "AbstractVector", "AbstractArray"],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile!",
+      "arg_names": ["q", "a", "p"],
+      "arg_types": [
+        "AbstractArray",
+        "AbstractArray",
+        "Union{Tuple{Vararg{Real}}, AbstractArray}"
+      ],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile!",
+      "arg_names": ["v", "p"],
+      "arg_types": [
+        "AbstractVector",
+        "Union{Tuple{Vararg{Real}}, AbstractArray}"
+      ],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "quantile!",
+      "arg_names": ["a", "p"],
+      "arg_types": [
+        "AbstractArray",
+        "Union{Tuple{Vararg{Real}}, AbstractArray}"
+      ],
+      "kwarg_names": ["sorted", "alpha", "beta"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "std",
+      "arg_names": ["A"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": ["corrected", "mean", "dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "std",
+      "arg_names": ["iterable"],
+      "arg_types": [""],
+      "kwarg_names": ["corrected", "mean"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "stdm",
+      "arg_names": ["A", "m"],
+      "arg_types": ["AbstractArray", "AbstractArray"],
+      "kwarg_names": ["corrected", "dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "stdm",
+      "arg_names": ["iterable", "m"],
+      "arg_types": ["", ""],
+      "kwarg_names": ["corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "var",
+      "arg_names": ["v"],
+      "arg_types": ["AbstractRange"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "var",
+      "arg_names": ["A"],
+      "arg_types": ["AbstractArray"],
+      "kwarg_names": ["corrected", "mean", "dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "var",
+      "arg_names": ["iterable"],
+      "arg_types": [""],
+      "kwarg_names": ["corrected", "mean"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "varm",
+      "arg_names": ["v", "m"],
+      "arg_types": ["AbstractRange", "AbstractArray"],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "varm",
+      "arg_names": ["v", "m"],
+      "arg_types": ["AbstractRange", ""],
+      "kwarg_names": [],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "varm",
+      "arg_names": ["A", "m"],
+      "arg_types": ["AbstractArray", "AbstractArray"],
+      "kwarg_names": ["corrected", "dims"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "varm",
+      "arg_names": ["A", "m"],
+      "arg_types": ["AbstractArray", ""],
+      "kwarg_names": ["corrected"],
+      "module": "Statistics",
+      "doc": ""
+    },
+    {
+      "name": "varm",
+      "arg_names": ["iterable", "m"],
+      "arg_types": ["", ""],
+      "kwarg_names": ["corrected"],
+      "module": "Statistics",
+      "doc": ""
+    }
+  ]
 }

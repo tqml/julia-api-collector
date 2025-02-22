@@ -1,1190 +1,701 @@
 {
-    "julia": "1.10.7",
-    "methods": [
-        {
-            "name": "var\"@dateformat_str\"",
-            "arg_names": [
-                "__source__",
-                "__module__",
-                "str"
-            ],
-            "arg_types": [
-                "LineNumberNode",
-                "Module",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndateformat\"Y-m-d H:M:S\"\n```\n\nCreate a [`DateFormat`](@ref) object. Similar to `DateFormat(\"Y-m-d H:M:S\")` but creates the DateFormat object once during macro expansion.\n\nSee [`DateFormat`](@ref) for details about format specifiers.\n"
-        },
-        {
-            "name": "adjust",
-            "arg_names": [
-                "df",
-                "start",
-                "step",
-                "limit"
-            ],
-            "arg_types": [
-                "Dates.DateFunction",
-                "",
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "No documentation found.\n\n`Dates.adjust` is a `Function`.\n\n```\n# 2 methods for generic function \"adjust\" from Dates:\n [1] adjust(df::Dates.DateFunction, start, step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:199\n [2] adjust(func::Function, start; step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:207\n```\n"
-        },
-        {
-            "name": "adjust",
-            "arg_names": [
-                "func",
-                "start"
-            ],
-            "arg_types": [
-                "Function",
-                ""
-            ],
-            "kwarg_names": [
-                "step",
-                "limit"
-            ],
-            "module": "Dates",
-            "doc": "No documentation found.\n\n`Dates.adjust` is a `Function`.\n\n```\n# 2 methods for generic function \"adjust\" from Dates:\n [1] adjust(df::Dates.DateFunction, start, step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:199\n [2] adjust(func::Function, start; step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:207\n```\n"
-        },
-        {
-            "name": "canonicalize",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Dates.CompoundPeriod"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ncanonicalize(::CompoundPeriod) -> CompoundPeriod\n```\n\nReduces the `CompoundPeriod` into its canonical form by applying the following rules:\n\n  * Any `Period` large enough be partially representable by a coarser `Period` will be broken into multiple `Period`s (eg. `Hour(30)` becomes `Day(1) + Hour(6)`)\n  * `Period`s with opposite signs will be combined when possible (eg. `Hour(1) - Day(1)` becomes `-Hour(23)`)\n\n# Examples\n\n```jldoctest\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(12), Dates.Hour(13)))\n1 day, 1 hour\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(-1), Dates.Minute(1)))\n-59 minutes\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Month(1), Dates.Week(-2)))\n1 month, -2 weeks\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Minute(50000)))\n4 weeks, 6 days, 17 hours, 20 minutes\n```\n"
-        },
-        {
-            "name": "canonicalize",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Period"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ncanonicalize(::CompoundPeriod) -> CompoundPeriod\n```\n\nReduces the `CompoundPeriod` into its canonical form by applying the following rules:\n\n  * Any `Period` large enough be partially representable by a coarser `Period` will be broken into multiple `Period`s (eg. `Hour(30)` becomes `Day(1) + Hour(6)`)\n  * `Period`s with opposite signs will be combined when possible (eg. `Hour(1) - Day(1)` becomes `-Hour(23)`)\n\n# Examples\n\n```jldoctest\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(12), Dates.Hour(13)))\n1 day, 1 hour\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(-1), Dates.Minute(1)))\n-59 minutes\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Month(1), Dates.Week(-2)))\n1 month, -2 weeks\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Minute(50000)))\n4 weeks, 6 days, 17 hours, 20 minutes\n```\n"
-        },
-        {
-            "name": "datetime2julian",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndatetime2julian(dt::DateTime) -> Float64\n```\n\nTake the given `DateTime` and return the number of Julian calendar days since the julian epoch `-4713-11-24T12:00:00` as a [`Float64`](@ref).\n"
-        },
-        {
-            "name": "datetime2rata",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndatetime2rata(dt::TimeType) -> Int64\n```\n\nReturn the number of Rata Die days since epoch from the given `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "datetime2unix",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndatetime2unix(dt::DateTime) -> Float64\n```\n\nTake the given `DateTime` and return the number of seconds since the unix epoch `1970-01-01T00:00:00` as a [`Float64`](@ref).\n"
-        },
-        {
-            "name": "day",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nday(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "day",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nday(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "day"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "day",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "day"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "day",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
-        },
-        {
-            "name": "dayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofmonth(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "dayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofquarter(dt::TimeType) -> Int\n```\n\nReturn the day of the current quarter of `dt`. Range of value is 1:92.\n"
-        },
-        {
-            "name": "dayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofweek(dt::TimeType) -> Int64\n```\n\nReturn the day of the week as an [`Int64`](@ref) with `1 = Monday, 2 = Tuesday, etc.`.\n\n# Examples\n\n```jldoctest\njulia> dayofweek(Date(\"2000-01-01\"))\n6\n```\n"
-        },
-        {
-            "name": "dayofweek",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofweek(dt::TimeType) -> Int64\n```\n\nReturn the day of the week as an [`Int64`](@ref) with `1 = Monday, 2 = Tuesday, etc.`.\n\n# Examples\n\n```jldoctest\njulia> dayofweek(Date(\"2000-01-01\"))\n6\n```\n"
-        },
-        {
-            "name": "dayofweekofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofweekofmonth(dt::TimeType) -> Int\n```\n\nFor the day of week of `dt`, return which number it is in `dt`'s month. So if the day of the week of `dt` is Monday, then `1 = First Monday of the month, 2 = Second Monday of the month, etc.` In the range 1:5.\n\n# Examples\n\n```jldoctest\njulia> dayofweekofmonth(Date(\"2000-02-01\"))\n1\n\njulia> dayofweekofmonth(Date(\"2000-02-08\"))\n2\n\njulia> dayofweekofmonth(Date(\"2000-02-15\"))\n3\n```\n"
-        },
-        {
-            "name": "dayofyear",
-            "arg_names": [
-                "y",
-                "m",
-                "d"
-            ],
-            "arg_types": [
-                "",
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofyear(dt::TimeType) -> Int\n```\n\nReturn the day of the year for `dt` with January 1st being day 1.\n"
-        },
-        {
-            "name": "dayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndayofyear(dt::TimeType) -> Int\n```\n\nReturn the day of the year for `dt` with January 1st being day 1.\n"
-        },
-        {
-            "name": "daysinmonth",
-            "arg_names": [
-                "y",
-                "m"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndaysinmonth(dt::TimeType) -> Int\n```\n\nReturn the number of days in the month of `dt`. Value will be 28, 29, 30, or 31.\n\n# Examples\n\n```jldoctest\njulia> daysinmonth(Date(\"2000-01\"))\n31\n\njulia> daysinmonth(Date(\"2001-02\"))\n28\n\njulia> daysinmonth(Date(\"2000-02\"))\n29\n```\n"
-        },
-        {
-            "name": "daysinmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndaysinmonth(dt::TimeType) -> Int\n```\n\nReturn the number of days in the month of `dt`. Value will be 28, 29, 30, or 31.\n\n# Examples\n\n```jldoctest\njulia> daysinmonth(Date(\"2000-01\"))\n31\n\njulia> daysinmonth(Date(\"2001-02\"))\n28\n\njulia> daysinmonth(Date(\"2000-02\"))\n29\n```\n"
-        },
-        {
-            "name": "daysinyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndaysinyear(dt::TimeType) -> Int\n```\n\nReturn 366 if the year of `dt` is a leap year, otherwise return 365.\n\n# Examples\n\n```jldoctest\njulia> daysinyear(1999)\n365\n\njulia> daysinyear(2000)\n366\n```\n"
-        },
-        {
-            "name": "daysinyear",
-            "arg_names": [
-                "y"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndaysinyear(dt::TimeType) -> Int\n```\n\nReturn 366 if the year of `dt` is a leap year, otherwise return 365.\n\n# Examples\n\n```jldoctest\njulia> daysinyear(1999)\n365\n\njulia> daysinyear(2000)\n366\n```\n"
-        },
-        {
-            "name": "daysofweekinmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ndaysofweekinmonth(dt::TimeType) -> Int\n```\n\nFor the day of week of `dt`, return the total number of that day of the week in `dt`'s month. Returns 4 or 5. Useful in temporal expressions for specifying the last day of a week in a month by including `dayofweekofmonth(dt) == daysofweekinmonth(dt)` in the adjuster function.\n\n# Examples\n\n```jldoctest\njulia> daysofweekinmonth(Date(\"2005-01-01\"))\n5\n\njulia> daysofweekinmonth(Date(\"2005-01-04\"))\n4\n```\n"
-        },
-        {
-            "name": "firstdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its month.\n\n# Examples\n\n```jldoctest\njulia> firstdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its month.\n\n# Examples\n\n```jldoctest\njulia> firstdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> firstdayofquarter(DateTime(\"1996-05-20\"))\n1996-04-01T00:00:00\n\njulia> firstdayofquarter(DateTime(\"1996-08-20\"))\n1996-07-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> firstdayofquarter(DateTime(\"1996-05-20\"))\n1996-04-01T00:00:00\n\njulia> firstdayofquarter(DateTime(\"1996-08-20\"))\n1996-07-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Monday of its week.\n\n# Examples\n\n```jldoctest\njulia> firstdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Monday of its week.\n\n# Examples\n\n```jldoctest\njulia> firstdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its year.\n\n# Examples\n\n```jldoctest\njulia> firstdayofyear(DateTime(\"1996-05-20\"))\n1996-01-01T00:00:00\n```\n"
-        },
-        {
-            "name": "firstdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nfirstdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its year.\n\n# Examples\n\n```jldoctest\njulia> firstdayofyear(DateTime(\"1996-05-20\"))\n1996-01-01T00:00:00\n```\n"
-        },
-        {
-            "name": "hour",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nhour(t::Time) -> Int64\n```\n\nThe hour of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "hour",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nhour(dt::DateTime) -> Int64\n```\n\nThe hour of day of a `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "isleapyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nisleapyear(dt::TimeType) -> Bool\n```\n\nReturn `true` if the year of `dt` is a leap year.\n\n# Examples\n\n```jldoctest\njulia> isleapyear(Date(\"2004\"))\ntrue\n\njulia> isleapyear(Date(\"2005\"))\nfalse\n```\n"
-        },
-        {
-            "name": "isleapyear",
-            "arg_names": [
-                "y"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nisleapyear(dt::TimeType) -> Bool\n```\n\nReturn `true` if the year of `dt` is a leap year.\n\n# Examples\n\n```jldoctest\njulia> isleapyear(Date(\"2004\"))\ntrue\n\njulia> isleapyear(Date(\"2005\"))\nfalse\n```\n"
-        },
-        {
-            "name": "julian2datetime",
-            "arg_names": [
-                "f"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\njulian2datetime(julian_days) -> DateTime\n```\n\nTake the number of Julian calendar days since epoch `-4713-11-24T12:00:00` and return the corresponding `DateTime`.\n"
-        },
-        {
-            "name": "lastdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its month.\n\n# Examples\n\n```jldoctest\njulia> lastdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-31T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its month.\n\n# Examples\n\n```jldoctest\njulia> lastdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-31T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> lastdayofquarter(DateTime(\"1996-05-20\"))\n1996-06-30T00:00:00\n\njulia> lastdayofquarter(DateTime(\"1996-08-20\"))\n1996-09-30T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> lastdayofquarter(DateTime(\"1996-05-20\"))\n1996-06-30T00:00:00\n\njulia> lastdayofquarter(DateTime(\"1996-08-20\"))\n1996-09-30T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Sunday of its week.\n\n# Examples\n\n```jldoctest\njulia> lastdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-07T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Sunday of its week.\n\n# Examples\n\n```jldoctest\njulia> lastdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-07T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its year.\n\n# Examples\n\n```jldoctest\njulia> lastdayofyear(DateTime(\"1996-05-20\"))\n1996-12-31T00:00:00\n```\n"
-        },
-        {
-            "name": "lastdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nlastdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its year.\n\n# Examples\n\n```jldoctest\njulia> lastdayofyear(DateTime(\"1996-05-20\"))\n1996-12-31T00:00:00\n```\n"
-        },
-        {
-            "name": "microsecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmicrosecond(t::Time) -> Int64\n```\n\nThe microsecond of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "millisecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmillisecond(t::Time) -> Int64\n```\n\nThe millisecond of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "millisecond",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmillisecond(dt::DateTime) -> Int64\n```\n\nThe millisecond of a `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "minute",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nminute(t::Time) -> Int64\n```\n\nThe minute of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "minute",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nminute(dt::DateTime) -> Int64\n```\n\nThe minute of a `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "month",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonth(dt::TimeType) -> Int64\n```\n\nThe month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "month",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonth(dt::TimeType) -> Int64\n```\n\nThe month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "month"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "month",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
-        },
-        {
-            "name": "monthday",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthday(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the month and day parts of a `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "monthday",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthday(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the month and day parts of a `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "month"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "month",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
-        },
-        {
-            "name": "nanosecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nnanosecond(t::Time) -> Int64\n```\n\nThe nanosecond of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "now",
-            "arg_names": [
-            ],
-            "arg_types": [
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nnow() -> DateTime\n```\n\nReturn a `DateTime` corresponding to the user's system time including the system timezone locale.\n"
-        },
-        {
-            "name": "now",
-            "arg_names": [
-                ""
-            ],
-            "arg_types": [
-                "Type{UTC}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nnow(::Type{UTC}) -> DateTime\n```\n\nReturn a `DateTime` corresponding to the user's system time as UTC/GMT. For other time zones, see the TimeZones.jl package.\n\n# Example\n\n```julia\njulia> now(UTC)\n2023-01-04T10:52:24.864\n```\n"
-        },
-        {
-            "name": "quarterofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nquarterofyear(dt::TimeType) -> Int\n```\n\nReturn the quarter that `dt` resides in. Range of value is 1:4.\n"
-        },
-        {
-            "name": "rata2datetime",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nrata2datetime(days) -> DateTime\n```\n\nTake the number of Rata Die days since epoch `0000-12-31T00:00:00` and return the corresponding `DateTime`.\n"
-        },
-        {
-            "name": "second",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nsecond(t::Time) -> Int64\n```\n\nThe second of a `Time` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "second",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nsecond(dt::DateTime) -> Int64\n```\n\nThe second of a `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "today",
-            "arg_names": [
-            ],
-            "arg_types": [
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\ntoday() -> Date\n```\n\nReturn the date portion of `now()`.\n"
-        },
-        {
-            "name": "tofirst",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "of"
-            ],
-            "module": "Dates",
-            "doc": "```\ntofirst(dt::TimeType, dow::Int; of=Month) -> TimeType\n```\n\nAdjusts `dt` to the first `dow` of its month. Alternatively, `of=Year` will adjust to the first `dow` of the year.\n"
-        },
-        {
-            "name": "tolast",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "of"
-            ],
-            "module": "Dates",
-            "doc": "```\ntolast(dt::TimeType, dow::Int; of=Month) -> TimeType\n```\n\nAdjusts `dt` to the last `dow` of its month. Alternatively, `of=Year` will adjust to the last `dow` of the year.\n"
-        },
-        {
-            "name": "tonext",
-            "arg_names": [
-                "func",
-                "dt"
-            ],
-            "arg_types": [
-                "Function",
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "step",
-                "limit",
-                "same"
-            ],
-            "module": "Dates",
-            "doc": "```\ntonext(func::Function, dt::TimeType; step=Day(1), limit=10000, same=false) -> TimeType\n```\n\nAdjusts `dt` by iterating at most `limit` iterations by `step` increments until `func` returns `true`. `func` must take a single `TimeType` argument and return a [`Bool`](@ref). `same` allows `dt` to be considered in satisfying `func`.\n"
-        },
-        {
-            "name": "tonext",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "same"
-            ],
-            "module": "Dates",
-            "doc": "```\ntonext(dt::TimeType, dow::Int; same::Bool=false) -> TimeType\n```\n\nAdjusts `dt` to the next day of week corresponding to `dow` with `1 = Monday, 2 = Tuesday, etc`. Setting `same=true` allows the current `dt` to be considered as the next `dow`, allowing for no adjustment to occur.\n"
-        },
-        {
-            "name": "toprev",
-            "arg_names": [
-                "func",
-                "dt"
-            ],
-            "arg_types": [
-                "Function",
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "step",
-                "limit",
-                "same"
-            ],
-            "module": "Dates",
-            "doc": "```\ntoprev(func::Function, dt::TimeType; step=Day(-1), limit=10000, same=false) -> TimeType\n```\n\nAdjusts `dt` by iterating at most `limit` iterations by `step` increments until `func` returns `true`. `func` must take a single `TimeType` argument and return a [`Bool`](@ref). `same` allows `dt` to be considered in satisfying `func`.\n"
-        },
-        {
-            "name": "toprev",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "same"
-            ],
-            "module": "Dates",
-            "doc": "```\ntoprev(dt::TimeType, dow::Int; same::Bool=false) -> TimeType\n```\n\nAdjusts `dt` to the previous day of week corresponding to `dow` with `1 = Monday, 2 = Tuesday, etc`. Setting `same=true` allows the current `dt` to be considered as the previous `dow`, allowing for no adjustment to occur.\n"
-        },
-        {
-            "name": "unix2datetime",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nunix2datetime(x) -> DateTime\n```\n\nTake the number of seconds since unix epoch `1970-01-01T00:00:00` and convert to the corresponding `DateTime`.\n"
-        },
-        {
-            "name": "week",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nweek(dt::TimeType) -> Int64\n```\n\nReturn the [ISO week date](https://en.wikipedia.org/wiki/ISO_week_date) of a `Date` or `DateTime` as an [`Int64`](@ref). Note that the first week of a year is the week that contains the first Thursday of the year, which can result in dates prior to January 4th being in the last week of the previous year. For example, `week(Date(2005, 1, 1))` is the 53rd week of 2004.\n\n# Examples\n\n```jldoctest\njulia> week(Date(1989, 6, 22))\n25\n\njulia> week(Date(2005, 1, 1))\n53\n\njulia> week(Date(2004, 12, 31))\n53\n```\n"
-        },
-        {
-            "name": "week",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nweek(dt::TimeType) -> Int64\n```\n\nReturn the [ISO week date](https://en.wikipedia.org/wiki/ISO_week_date) of a `Date` or `DateTime` as an [`Int64`](@ref). Note that the first week of a year is the week that contains the first Thursday of the year, which can result in dates prior to January 4th being in the last week of the previous year. For example, `week(Date(2005, 1, 1))` is the 53rd week of 2004.\n\n# Examples\n\n```jldoctest\njulia> week(Date(1989, 6, 22))\n25\n\njulia> week(Date(2005, 1, 1))\n53\n\njulia> week(Date(2004, 12, 31))\n53\n```\n"
-        },
-        {
-            "name": "year",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyear(dt::TimeType) -> Int64\n```\n\nThe year of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "year",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyear(dt::TimeType) -> Int64\n```\n\nThe year of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
-        },
-        {
-            "name": "yearmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyearmonth(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the year and month parts of a `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "yearmonth",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyearmonth(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the year and month parts of a `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "yearmonthday",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyearmonthday(dt::TimeType) -> (Int64, Int64, Int64)\n```\n\nSimultaneously return the year, month and day parts of a `Date` or `DateTime`.\n"
-        },
-        {
-            "name": "yearmonthday",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": "```\nyearmonthday(dt::TimeType) -> (Int64, Int64, Int64)\n```\n\nSimultaneously return the year, month and day parts of a `Date` or `DateTime`.\n"
-        }
-    ]
+  "julia": "1.10.7",
+  "methods": [
+    {
+      "name": "var\"@dateformat_str\"",
+      "arg_names": ["__source__", "__module__", "str"],
+      "arg_types": ["LineNumberNode", "Module", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndateformat\"Y-m-d H:M:S\"\n```\n\nCreate a [`DateFormat`](@ref) object. Similar to `DateFormat(\"Y-m-d H:M:S\")` but creates the DateFormat object once during macro expansion.\n\nSee [`DateFormat`](@ref) for details about format specifiers.\n"
+    },
+    {
+      "name": "adjust",
+      "arg_names": ["df", "start", "step", "limit"],
+      "arg_types": ["Dates.DateFunction", "", "", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "No documentation found.\n\n`Dates.adjust` is a `Function`.\n\n```\n# 2 methods for generic function \"adjust\" from Dates:\n [1] adjust(df::Dates.DateFunction, start, step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:199\n [2] adjust(func::Function, start; step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:207\n```\n"
+    },
+    {
+      "name": "adjust",
+      "arg_names": ["func", "start"],
+      "arg_types": ["Function", ""],
+      "kwarg_names": ["step", "limit"],
+      "module": "Dates",
+      "doc": "No documentation found.\n\n`Dates.adjust` is a `Function`.\n\n```\n# 2 methods for generic function \"adjust\" from Dates:\n [1] adjust(df::Dates.DateFunction, start, step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:199\n [2] adjust(func::Function, start; step, limit)\n     @ /opt/hostedtoolcache/julia/1.10.7/x64/share/julia/stdlib/v1.10/Dates/src/adjusters.jl:207\n```\n"
+    },
+    {
+      "name": "canonicalize",
+      "arg_names": ["x"],
+      "arg_types": ["Dates.CompoundPeriod"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ncanonicalize(::CompoundPeriod) -> CompoundPeriod\n```\n\nReduces the `CompoundPeriod` into its canonical form by applying the following rules:\n\n  * Any `Period` large enough be partially representable by a coarser `Period` will be broken into multiple `Period`s (eg. `Hour(30)` becomes `Day(1) + Hour(6)`)\n  * `Period`s with opposite signs will be combined when possible (eg. `Hour(1) - Day(1)` becomes `-Hour(23)`)\n\n# Examples\n\n```jldoctest\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(12), Dates.Hour(13)))\n1 day, 1 hour\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(-1), Dates.Minute(1)))\n-59 minutes\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Month(1), Dates.Week(-2)))\n1 month, -2 weeks\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Minute(50000)))\n4 weeks, 6 days, 17 hours, 20 minutes\n```\n"
+    },
+    {
+      "name": "canonicalize",
+      "arg_names": ["x"],
+      "arg_types": ["Period"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ncanonicalize(::CompoundPeriod) -> CompoundPeriod\n```\n\nReduces the `CompoundPeriod` into its canonical form by applying the following rules:\n\n  * Any `Period` large enough be partially representable by a coarser `Period` will be broken into multiple `Period`s (eg. `Hour(30)` becomes `Day(1) + Hour(6)`)\n  * `Period`s with opposite signs will be combined when possible (eg. `Hour(1) - Day(1)` becomes `-Hour(23)`)\n\n# Examples\n\n```jldoctest\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(12), Dates.Hour(13)))\n1 day, 1 hour\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Hour(-1), Dates.Minute(1)))\n-59 minutes\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Month(1), Dates.Week(-2)))\n1 month, -2 weeks\n\njulia> canonicalize(Dates.CompoundPeriod(Dates.Minute(50000)))\n4 weeks, 6 days, 17 hours, 20 minutes\n```\n"
+    },
+    {
+      "name": "datetime2julian",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndatetime2julian(dt::DateTime) -> Float64\n```\n\nTake the given `DateTime` and return the number of Julian calendar days since the julian epoch `-4713-11-24T12:00:00` as a [`Float64`](@ref).\n"
+    },
+    {
+      "name": "datetime2rata",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndatetime2rata(dt::TimeType) -> Int64\n```\n\nReturn the number of Rata Die days since epoch from the given `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "datetime2unix",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndatetime2unix(dt::DateTime) -> Float64\n```\n\nTake the given `DateTime` and return the number of seconds since the unix epoch `1970-01-01T00:00:00` as a [`Float64`](@ref).\n"
+    },
+    {
+      "name": "day",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nday(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "day",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nday(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["day"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["day", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayabbr(dt::TimeType; locale=\"english\") -> String\ndayabbr(day::Integer; locale=\"english\") -> String\n```\n\nReturn the abbreviated name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayabbr(Date(\"2000-01-01\"))\n\"Sat\"\n\njulia> dayabbr(3)\n\"Wed\"\n```\n"
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["day"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["day", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayname(dt::TimeType; locale=\"english\") -> String\ndayname(day::Integer; locale=\"english\") -> String\n```\n\nReturn the full day name corresponding to the day of the week of the `Date` or `DateTime` in the given `locale`. Also accepts `Integer`.\n\n# Examples\n\n```jldoctest\njulia> dayname(Date(\"2000-01-01\"))\n\"Saturday\"\n\njulia> dayname(4)\n\"Thursday\"\n```\n"
+    },
+    {
+      "name": "dayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofmonth(dt::TimeType) -> Int64\n```\n\nThe day of month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "dayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofquarter(dt::TimeType) -> Int\n```\n\nReturn the day of the current quarter of `dt`. Range of value is 1:92.\n"
+    },
+    {
+      "name": "dayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofweek(dt::TimeType) -> Int64\n```\n\nReturn the day of the week as an [`Int64`](@ref) with `1 = Monday, 2 = Tuesday, etc.`.\n\n# Examples\n\n```jldoctest\njulia> dayofweek(Date(\"2000-01-01\"))\n6\n```\n"
+    },
+    {
+      "name": "dayofweek",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofweek(dt::TimeType) -> Int64\n```\n\nReturn the day of the week as an [`Int64`](@ref) with `1 = Monday, 2 = Tuesday, etc.`.\n\n# Examples\n\n```jldoctest\njulia> dayofweek(Date(\"2000-01-01\"))\n6\n```\n"
+    },
+    {
+      "name": "dayofweekofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofweekofmonth(dt::TimeType) -> Int\n```\n\nFor the day of week of `dt`, return which number it is in `dt`'s month. So if the day of the week of `dt` is Monday, then `1 = First Monday of the month, 2 = Second Monday of the month, etc.` In the range 1:5.\n\n# Examples\n\n```jldoctest\njulia> dayofweekofmonth(Date(\"2000-02-01\"))\n1\n\njulia> dayofweekofmonth(Date(\"2000-02-08\"))\n2\n\njulia> dayofweekofmonth(Date(\"2000-02-15\"))\n3\n```\n"
+    },
+    {
+      "name": "dayofyear",
+      "arg_names": ["y", "m", "d"],
+      "arg_types": ["", "", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofyear(dt::TimeType) -> Int\n```\n\nReturn the day of the year for `dt` with January 1st being day 1.\n"
+    },
+    {
+      "name": "dayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndayofyear(dt::TimeType) -> Int\n```\n\nReturn the day of the year for `dt` with January 1st being day 1.\n"
+    },
+    {
+      "name": "daysinmonth",
+      "arg_names": ["y", "m"],
+      "arg_types": ["", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndaysinmonth(dt::TimeType) -> Int\n```\n\nReturn the number of days in the month of `dt`. Value will be 28, 29, 30, or 31.\n\n# Examples\n\n```jldoctest\njulia> daysinmonth(Date(\"2000-01\"))\n31\n\njulia> daysinmonth(Date(\"2001-02\"))\n28\n\njulia> daysinmonth(Date(\"2000-02\"))\n29\n```\n"
+    },
+    {
+      "name": "daysinmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndaysinmonth(dt::TimeType) -> Int\n```\n\nReturn the number of days in the month of `dt`. Value will be 28, 29, 30, or 31.\n\n# Examples\n\n```jldoctest\njulia> daysinmonth(Date(\"2000-01\"))\n31\n\njulia> daysinmonth(Date(\"2001-02\"))\n28\n\njulia> daysinmonth(Date(\"2000-02\"))\n29\n```\n"
+    },
+    {
+      "name": "daysinyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndaysinyear(dt::TimeType) -> Int\n```\n\nReturn 366 if the year of `dt` is a leap year, otherwise return 365.\n\n# Examples\n\n```jldoctest\njulia> daysinyear(1999)\n365\n\njulia> daysinyear(2000)\n366\n```\n"
+    },
+    {
+      "name": "daysinyear",
+      "arg_names": ["y"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndaysinyear(dt::TimeType) -> Int\n```\n\nReturn 366 if the year of `dt` is a leap year, otherwise return 365.\n\n# Examples\n\n```jldoctest\njulia> daysinyear(1999)\n365\n\njulia> daysinyear(2000)\n366\n```\n"
+    },
+    {
+      "name": "daysofweekinmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ndaysofweekinmonth(dt::TimeType) -> Int\n```\n\nFor the day of week of `dt`, return the total number of that day of the week in `dt`'s month. Returns 4 or 5. Useful in temporal expressions for specifying the last day of a week in a month by including `dayofweekofmonth(dt) == daysofweekinmonth(dt)` in the adjuster function.\n\n# Examples\n\n```jldoctest\njulia> daysofweekinmonth(Date(\"2005-01-01\"))\n5\n\njulia> daysofweekinmonth(Date(\"2005-01-04\"))\n4\n```\n"
+    },
+    {
+      "name": "firstdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its month.\n\n# Examples\n\n```jldoctest\njulia> firstdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its month.\n\n# Examples\n\n```jldoctest\njulia> firstdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> firstdayofquarter(DateTime(\"1996-05-20\"))\n1996-04-01T00:00:00\n\njulia> firstdayofquarter(DateTime(\"1996-08-20\"))\n1996-07-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> firstdayofquarter(DateTime(\"1996-05-20\"))\n1996-04-01T00:00:00\n\njulia> firstdayofquarter(DateTime(\"1996-08-20\"))\n1996-07-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Monday of its week.\n\n# Examples\n\n```jldoctest\njulia> firstdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Monday of its week.\n\n# Examples\n\n```jldoctest\njulia> firstdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its year.\n\n# Examples\n\n```jldoctest\njulia> firstdayofyear(DateTime(\"1996-05-20\"))\n1996-01-01T00:00:00\n```\n"
+    },
+    {
+      "name": "firstdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nfirstdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the first day of its year.\n\n# Examples\n\n```jldoctest\njulia> firstdayofyear(DateTime(\"1996-05-20\"))\n1996-01-01T00:00:00\n```\n"
+    },
+    {
+      "name": "hour",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nhour(t::Time) -> Int64\n```\n\nThe hour of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "hour",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nhour(dt::DateTime) -> Int64\n```\n\nThe hour of day of a `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "isleapyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nisleapyear(dt::TimeType) -> Bool\n```\n\nReturn `true` if the year of `dt` is a leap year.\n\n# Examples\n\n```jldoctest\njulia> isleapyear(Date(\"2004\"))\ntrue\n\njulia> isleapyear(Date(\"2005\"))\nfalse\n```\n"
+    },
+    {
+      "name": "isleapyear",
+      "arg_names": ["y"],
+      "arg_types": ["Integer"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nisleapyear(dt::TimeType) -> Bool\n```\n\nReturn `true` if the year of `dt` is a leap year.\n\n# Examples\n\n```jldoctest\njulia> isleapyear(Date(\"2004\"))\ntrue\n\njulia> isleapyear(Date(\"2005\"))\nfalse\n```\n"
+    },
+    {
+      "name": "julian2datetime",
+      "arg_names": ["f"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\njulian2datetime(julian_days) -> DateTime\n```\n\nTake the number of Julian calendar days since epoch `-4713-11-24T12:00:00` and return the corresponding `DateTime`.\n"
+    },
+    {
+      "name": "lastdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its month.\n\n# Examples\n\n```jldoctest\njulia> lastdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-31T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofmonth(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its month.\n\n# Examples\n\n```jldoctest\njulia> lastdayofmonth(DateTime(\"1996-05-20\"))\n1996-05-31T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> lastdayofquarter(DateTime(\"1996-05-20\"))\n1996-06-30T00:00:00\n\njulia> lastdayofquarter(DateTime(\"1996-08-20\"))\n1996-09-30T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofquarter(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its quarter.\n\n# Examples\n\n```jldoctest\njulia> lastdayofquarter(DateTime(\"1996-05-20\"))\n1996-06-30T00:00:00\n\njulia> lastdayofquarter(DateTime(\"1996-08-20\"))\n1996-09-30T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Sunday of its week.\n\n# Examples\n\n```jldoctest\njulia> lastdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-07T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofweek(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the Sunday of its week.\n\n# Examples\n\n```jldoctest\njulia> lastdayofweek(DateTime(\"1996-01-05T12:30:00\"))\n1996-01-07T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its year.\n\n# Examples\n\n```jldoctest\njulia> lastdayofyear(DateTime(\"1996-05-20\"))\n1996-12-31T00:00:00\n```\n"
+    },
+    {
+      "name": "lastdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nlastdayofyear(dt::TimeType) -> TimeType\n```\n\nAdjusts `dt` to the last day of its year.\n\n# Examples\n\n```jldoctest\njulia> lastdayofyear(DateTime(\"1996-05-20\"))\n1996-12-31T00:00:00\n```\n"
+    },
+    {
+      "name": "microsecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmicrosecond(t::Time) -> Int64\n```\n\nThe microsecond of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "millisecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmillisecond(t::Time) -> Int64\n```\n\nThe millisecond of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "millisecond",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmillisecond(dt::DateTime) -> Int64\n```\n\nThe millisecond of a `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "minute",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nminute(t::Time) -> Int64\n```\n\nThe minute of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "minute",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nminute(dt::DateTime) -> Int64\n```\n\nThe minute of a `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "month",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonth(dt::TimeType) -> Int64\n```\n\nThe month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "month",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonth(dt::TimeType) -> Int64\n```\n\nThe month of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["month"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["month", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonthabbr(dt::TimeType; locale=\"english\") -> String\nmonthabbr(month::Integer, locale=\"english\") -> String\n```\n\nReturn the abbreviated month name of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthabbr(Date(\"2005-01-04\"))\n\"Jan\"\n\njulia> monthabbr(2)\n\"Feb\"\n```\n"
+    },
+    {
+      "name": "monthday",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonthday(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the month and day parts of a `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "monthday",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonthday(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the month and day parts of a `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["month"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["month", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nmonthname(dt::TimeType; locale=\"english\") -> String\nmonthname(month::Integer, locale=\"english\") -> String\n```\n\nReturn the full name of the month of the `Date` or `DateTime` or `Integer` in the given `locale`.\n\n# Examples\n\n```jldoctest\njulia> monthname(Date(\"2005-01-04\"))\n\"January\"\n\njulia> monthname(2)\n\"February\"\n```\n"
+    },
+    {
+      "name": "nanosecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nnanosecond(t::Time) -> Int64\n```\n\nThe nanosecond of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "now",
+      "arg_names": [],
+      "arg_types": [],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nnow() -> DateTime\n```\n\nReturn a `DateTime` corresponding to the user's system time including the system timezone locale.\n"
+    },
+    {
+      "name": "now",
+      "arg_names": [""],
+      "arg_types": ["Type{UTC}"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nnow(::Type{UTC}) -> DateTime\n```\n\nReturn a `DateTime` corresponding to the user's system time as UTC/GMT. For other time zones, see the TimeZones.jl package.\n\n# Example\n\n```julia\njulia> now(UTC)\n2023-01-04T10:52:24.864\n```\n"
+    },
+    {
+      "name": "quarterofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nquarterofyear(dt::TimeType) -> Int\n```\n\nReturn the quarter that `dt` resides in. Range of value is 1:4.\n"
+    },
+    {
+      "name": "rata2datetime",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nrata2datetime(days) -> DateTime\n```\n\nTake the number of Rata Die days since epoch `0000-12-31T00:00:00` and return the corresponding `DateTime`.\n"
+    },
+    {
+      "name": "second",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nsecond(t::Time) -> Int64\n```\n\nThe second of a `Time` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "second",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nsecond(dt::DateTime) -> Int64\n```\n\nThe second of a `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "today",
+      "arg_names": [],
+      "arg_types": [],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\ntoday() -> Date\n```\n\nReturn the date portion of `now()`.\n"
+    },
+    {
+      "name": "tofirst",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["of"],
+      "module": "Dates",
+      "doc": "```\ntofirst(dt::TimeType, dow::Int; of=Month) -> TimeType\n```\n\nAdjusts `dt` to the first `dow` of its month. Alternatively, `of=Year` will adjust to the first `dow` of the year.\n"
+    },
+    {
+      "name": "tolast",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["of"],
+      "module": "Dates",
+      "doc": "```\ntolast(dt::TimeType, dow::Int; of=Month) -> TimeType\n```\n\nAdjusts `dt` to the last `dow` of its month. Alternatively, `of=Year` will adjust to the last `dow` of the year.\n"
+    },
+    {
+      "name": "tonext",
+      "arg_names": ["func", "dt"],
+      "arg_types": ["Function", "TimeType"],
+      "kwarg_names": ["step", "limit", "same"],
+      "module": "Dates",
+      "doc": "```\ntonext(func::Function, dt::TimeType; step=Day(1), limit=10000, same=false) -> TimeType\n```\n\nAdjusts `dt` by iterating at most `limit` iterations by `step` increments until `func` returns `true`. `func` must take a single `TimeType` argument and return a [`Bool`](@ref). `same` allows `dt` to be considered in satisfying `func`.\n"
+    },
+    {
+      "name": "tonext",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["same"],
+      "module": "Dates",
+      "doc": "```\ntonext(dt::TimeType, dow::Int; same::Bool=false) -> TimeType\n```\n\nAdjusts `dt` to the next day of week corresponding to `dow` with `1 = Monday, 2 = Tuesday, etc`. Setting `same=true` allows the current `dt` to be considered as the next `dow`, allowing for no adjustment to occur.\n"
+    },
+    {
+      "name": "toprev",
+      "arg_names": ["func", "dt"],
+      "arg_types": ["Function", "TimeType"],
+      "kwarg_names": ["step", "limit", "same"],
+      "module": "Dates",
+      "doc": "```\ntoprev(func::Function, dt::TimeType; step=Day(-1), limit=10000, same=false) -> TimeType\n```\n\nAdjusts `dt` by iterating at most `limit` iterations by `step` increments until `func` returns `true`. `func` must take a single `TimeType` argument and return a [`Bool`](@ref). `same` allows `dt` to be considered in satisfying `func`.\n"
+    },
+    {
+      "name": "toprev",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["same"],
+      "module": "Dates",
+      "doc": "```\ntoprev(dt::TimeType, dow::Int; same::Bool=false) -> TimeType\n```\n\nAdjusts `dt` to the previous day of week corresponding to `dow` with `1 = Monday, 2 = Tuesday, etc`. Setting `same=true` allows the current `dt` to be considered as the previous `dow`, allowing for no adjustment to occur.\n"
+    },
+    {
+      "name": "unix2datetime",
+      "arg_names": ["x"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nunix2datetime(x) -> DateTime\n```\n\nTake the number of seconds since unix epoch `1970-01-01T00:00:00` and convert to the corresponding `DateTime`.\n"
+    },
+    {
+      "name": "week",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nweek(dt::TimeType) -> Int64\n```\n\nReturn the [ISO week date](https://en.wikipedia.org/wiki/ISO_week_date) of a `Date` or `DateTime` as an [`Int64`](@ref). Note that the first week of a year is the week that contains the first Thursday of the year, which can result in dates prior to January 4th being in the last week of the previous year. For example, `week(Date(2005, 1, 1))` is the 53rd week of 2004.\n\n# Examples\n\n```jldoctest\njulia> week(Date(1989, 6, 22))\n25\n\njulia> week(Date(2005, 1, 1))\n53\n\njulia> week(Date(2004, 12, 31))\n53\n```\n"
+    },
+    {
+      "name": "week",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nweek(dt::TimeType) -> Int64\n```\n\nReturn the [ISO week date](https://en.wikipedia.org/wiki/ISO_week_date) of a `Date` or `DateTime` as an [`Int64`](@ref). Note that the first week of a year is the week that contains the first Thursday of the year, which can result in dates prior to January 4th being in the last week of the previous year. For example, `week(Date(2005, 1, 1))` is the 53rd week of 2004.\n\n# Examples\n\n```jldoctest\njulia> week(Date(1989, 6, 22))\n25\n\njulia> week(Date(2005, 1, 1))\n53\n\njulia> week(Date(2004, 12, 31))\n53\n```\n"
+    },
+    {
+      "name": "year",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyear(dt::TimeType) -> Int64\n```\n\nThe year of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "year",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyear(dt::TimeType) -> Int64\n```\n\nThe year of a `Date` or `DateTime` as an [`Int64`](@ref).\n"
+    },
+    {
+      "name": "yearmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyearmonth(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the year and month parts of a `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "yearmonth",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyearmonth(dt::TimeType) -> (Int64, Int64)\n```\n\nSimultaneously return the year and month parts of a `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "yearmonthday",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyearmonthday(dt::TimeType) -> (Int64, Int64, Int64)\n```\n\nSimultaneously return the year, month and day parts of a `Date` or `DateTime`.\n"
+    },
+    {
+      "name": "yearmonthday",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": "```\nyearmonthday(dt::TimeType) -> (Int64, Int64, Int64)\n```\n\nSimultaneously return the year, month and day parts of a `Date` or `DateTime`.\n"
+    }
+  ]
 }

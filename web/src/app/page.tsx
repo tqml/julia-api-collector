@@ -1,6 +1,6 @@
-import { DiffViewer } from '@/components/diff-viewer';
-import { SiteHeader } from "@/components/site-header"
-import { SiteFooter } from "@/components/site-footer"
+import { DiffViewer } from "@/components/diff-viewer";
+import { SiteHeader } from "@/components/site-header";
+import { SiteFooter } from "@/components/site-footer";
 
 export default function Home() {
   return (
@@ -13,5 +13,5 @@ export default function Home() {
       </main>
       <SiteFooter />
     </div>
-  )
+  );
 }

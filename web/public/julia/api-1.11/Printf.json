@@ -1,94 +1,45 @@
 {
-    "julia": "1.11.2",
-    "methods": [
-        {
-            "name": "var\"@printf\"",
-            "arg_names": [
-                "__source__",
-                "__module__",
-                "io_or_fmt",
-                "args..."
-            ],
-            "arg_types": [
-                "LineNumberNode",
-                "Module",
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Printf",
-            "doc": ""
-        },
-        {
-            "name": "var\"@sprintf\"",
-            "arg_names": [
-                "__source__",
-                "__module__",
-                "fmt",
-                "args..."
-            ],
-            "arg_types": [
-                "LineNumberNode",
-                "Module",
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Printf",
-            "doc": ""
-        },
-        {
-            "name": "format",
-            "arg_names": [
-                "f",
-                "args..."
-            ],
-            "arg_types": [
-                "Printf.Format",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Printf",
-            "doc": ""
-        },
-        {
-            "name": "format",
-            "arg_names": [
-                "io",
-                "f",
-                "args..."
-            ],
-            "arg_types": [
-                "IO",
-                "Printf.Format",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Printf",
-            "doc": ""
-        },
-        {
-            "name": "format",
-            "arg_names": [
-                "buf",
-                "pos",
-                "f",
-                "args..."
-            ],
-            "arg_types": [
-                "Vector{UInt8}",
-                "Integer",
-                "Printf.Format",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Printf",
-            "doc": ""
-        }
-    ]
+  "julia": "1.11.2",
+  "methods": [
+    {
+      "name": "var\"@printf\"",
+      "arg_names": ["__source__", "__module__", "io_or_fmt", "args..."],
+      "arg_types": ["LineNumberNode", "Module", "", ""],
+      "kwarg_names": [],
+      "module": "Printf",
+      "doc": ""
+    },
+    {
+      "name": "var\"@sprintf\"",
+      "arg_names": ["__source__", "__module__", "fmt", "args..."],
+      "arg_types": ["LineNumberNode", "Module", "", ""],
+      "kwarg_names": [],
+      "module": "Printf",
+      "doc": ""
+    },
+    {
+      "name": "format",
+      "arg_names": ["f", "args..."],
+      "arg_types": ["Printf.Format", ""],
+      "kwarg_names": [],
+      "module": "Printf",
+      "doc": ""
+    },
+    {
+      "name": "format",
+      "arg_names": ["io", "f", "args..."],
+      "arg_types": ["IO", "Printf.Format", ""],
+      "kwarg_names": [],
+      "module": "Printf",
+      "doc": ""
+    },
+    {
+      "name": "format",
+      "arg_names": ["buf", "pos", "f", "args..."],
+      "arg_types": ["Vector{UInt8}", "Integer", "Printf.Format", ""],
+      "kwarg_names": [],
+      "module": "Printf",
+      "doc": ""
+    }
+  ]
 }

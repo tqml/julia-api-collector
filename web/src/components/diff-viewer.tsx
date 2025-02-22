@@ -37,7 +37,7 @@ export function DiffViewer({ className }: DiffViewerProps) {
   const juliaVersionFetcher = async ([_url, version, module]: [
     string,
     string,
-    string
+    string,
   ]) => {
     const path = `/julia/api-${version}/${module}.txt`;
     const resp = await fetch(path);
@@ -46,11 +46,11 @@ export function DiffViewer({ className }: DiffViewerProps) {
 
   const { data: leftFile } = useSWR(
     [`api/version`, versionLeft, module],
-    juliaVersionFetcher
+    juliaVersionFetcher,
   );
   const { data: rightFile } = useSWR(
     [`api/version`, versionRight, module],
-    juliaVersionFetcher
+    juliaVersionFetcher,
   );
 
   const diff = useMemo(() => {

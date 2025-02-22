@@ -13,7 +13,11 @@ const compat = new FlatCompat({
  * @type {import("eslint").Linter.Config}
  */
 const eslintConfig = [
-  ...compat.extends("next/core-web-vitals", "next/typescript"),
+  ...compat.extends(
+    "next/core-web-vitals",
+    "next/typescript",
+    "plugin:prettier/recommended",
+  ),
   {
     rules: {
       "no-console": "warn",

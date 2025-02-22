@@ -1,1154 +1,685 @@
 {
-    "julia": "1.11.2",
-    "methods": [
-        {
-            "name": "var\"@dateformat_str\"",
-            "arg_names": [
-                "__source__",
-                "__module__",
-                "str"
-            ],
-            "arg_types": [
-                "LineNumberNode",
-                "Module",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "canonicalize",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Dates.CompoundPeriod"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "canonicalize",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                "Period"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "datetime2julian",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "datetime2rata",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "datetime2unix",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "day",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "day",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "day"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayabbr",
-            "arg_names": [
-                "day",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "day"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayname",
-            "arg_names": [
-                "day",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofweek",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofweekofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofyear",
-            "arg_names": [
-                "y",
-                "m",
-                "d"
-            ],
-            "arg_types": [
-                "",
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "dayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "daysinmonth",
-            "arg_names": [
-                "y",
-                "m"
-            ],
-            "arg_types": [
-                "",
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "daysinmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "daysinyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "daysinyear",
-            "arg_names": [
-                "y"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "daysofweekinmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "firstdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "hour",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "hour",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "isleapyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "isleapyear",
-            "arg_names": [
-                "y"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "julian2datetime",
-            "arg_names": [
-                "f"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofquarter",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofweek",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "lastdayofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "Date"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "microsecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "millisecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "millisecond",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "minute",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "minute",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "month",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "month",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "month"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthabbr",
-            "arg_names": [
-                "month",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthday",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthday",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "month"
-            ],
-            "arg_types": [
-                "Integer"
-            ],
-            "kwarg_names": [
-                "locale"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "monthname",
-            "arg_names": [
-                "month",
-                "locale"
-            ],
-            "arg_types": [
-                "Integer",
-                "Dates.DateLocale"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "nanosecond",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "now",
-            "arg_names": [
-            ],
-            "arg_types": [
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "now",
-            "arg_names": [
-                ""
-            ],
-            "arg_types": [
-                "Type{UTC}"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "quarterofyear",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "rata2datetime",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "second",
-            "arg_names": [
-                "t"
-            ],
-            "arg_types": [
-                "Time"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "second",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "DateTime"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "today",
-            "arg_names": [
-            ],
-            "arg_types": [
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "tofirst",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "of"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "tolast",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "of"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "tonext",
-            "arg_names": [
-                "func",
-                "dt"
-            ],
-            "arg_types": [
-                "Function",
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "step",
-                "limit",
-                "same"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "tonext",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "same"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "toprev",
-            "arg_names": [
-                "func",
-                "dt"
-            ],
-            "arg_types": [
-                "Function",
-                "TimeType"
-            ],
-            "kwarg_names": [
-                "step",
-                "limit",
-                "same"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "toprev",
-            "arg_names": [
-                "dt",
-                "dow"
-            ],
-            "arg_types": [
-                "TimeType",
-                "Int64"
-            ],
-            "kwarg_names": [
-                "same"
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "unix2datetime",
-            "arg_names": [
-                "x"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "week",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "week",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "year",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "year",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "yearmonth",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "yearmonth",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "yearmonthday",
-            "arg_names": [
-                "dt"
-            ],
-            "arg_types": [
-                "TimeType"
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        },
-        {
-            "name": "yearmonthday",
-            "arg_names": [
-                "days"
-            ],
-            "arg_types": [
-                ""
-            ],
-            "kwarg_names": [
-            ],
-            "module": "Dates",
-            "doc": ""
-        }
-    ]
+  "julia": "1.11.2",
+  "methods": [
+    {
+      "name": "var\"@dateformat_str\"",
+      "arg_names": ["__source__", "__module__", "str"],
+      "arg_types": ["LineNumberNode", "Module", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "canonicalize",
+      "arg_names": ["x"],
+      "arg_types": ["Dates.CompoundPeriod"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "canonicalize",
+      "arg_names": ["x"],
+      "arg_types": ["Period"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "datetime2julian",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "datetime2rata",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "datetime2unix",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "day",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "day",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["day"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayabbr",
+      "arg_names": ["day", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["day"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayname",
+      "arg_names": ["day", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofweek",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofweekofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofyear",
+      "arg_names": ["y", "m", "d"],
+      "arg_types": ["", "", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "dayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "daysinmonth",
+      "arg_names": ["y", "m"],
+      "arg_types": ["", ""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "daysinmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "daysinyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "daysinyear",
+      "arg_names": ["y"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "daysofweekinmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "firstdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "hour",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "hour",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "isleapyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "isleapyear",
+      "arg_names": ["y"],
+      "arg_types": ["Integer"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "julian2datetime",
+      "arg_names": ["f"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofquarter",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofweek",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "lastdayofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["Date"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "microsecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "millisecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "millisecond",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "minute",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "minute",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "month",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "month",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["month"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthabbr",
+      "arg_names": ["month", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthday",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthday",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["month"],
+      "arg_types": ["Integer"],
+      "kwarg_names": ["locale"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "monthname",
+      "arg_names": ["month", "locale"],
+      "arg_types": ["Integer", "Dates.DateLocale"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "nanosecond",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "now",
+      "arg_names": [],
+      "arg_types": [],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "now",
+      "arg_names": [""],
+      "arg_types": ["Type{UTC}"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "quarterofyear",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "rata2datetime",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "second",
+      "arg_names": ["t"],
+      "arg_types": ["Time"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "second",
+      "arg_names": ["dt"],
+      "arg_types": ["DateTime"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "today",
+      "arg_names": [],
+      "arg_types": [],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "tofirst",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["of"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "tolast",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["of"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "tonext",
+      "arg_names": ["func", "dt"],
+      "arg_types": ["Function", "TimeType"],
+      "kwarg_names": ["step", "limit", "same"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "tonext",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["same"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "toprev",
+      "arg_names": ["func", "dt"],
+      "arg_types": ["Function", "TimeType"],
+      "kwarg_names": ["step", "limit", "same"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "toprev",
+      "arg_names": ["dt", "dow"],
+      "arg_types": ["TimeType", "Int64"],
+      "kwarg_names": ["same"],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "unix2datetime",
+      "arg_names": ["x"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "week",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "week",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "year",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "year",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "yearmonth",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "yearmonth",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "yearmonthday",
+      "arg_names": ["dt"],
+      "arg_types": ["TimeType"],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    },
+    {
+      "name": "yearmonthday",
+      "arg_names": ["days"],
+      "arg_types": [""],
+      "kwarg_names": [],
+      "module": "Dates",
+      "doc": ""
+    }
+  ]
 }
