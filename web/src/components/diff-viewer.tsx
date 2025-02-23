@@ -22,10 +22,15 @@ import {
 } from "@/lib/julia";
 import { Switch } from "./ui/switch";
 import { Label } from "./ui/label";
+import { z } from "zod";
+import { useSearchParams } from "next/navigation";
 
 interface DiffViewerProps {
   className?: string;
 }
+
+const ModuleSchema = z.enum(JuliaModules).optional();
+const VersionSchema = z.enum(JuliaVersions).optional();
 
 export function DiffViewer({ className }: DiffViewerProps) {
   const [module, setModule] = useState<JuliaModule>("Base");
