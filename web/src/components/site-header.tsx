@@ -22,7 +22,7 @@ export function SiteHeader() {
               target="_blank"
               rel="noreferrer"
               className={buttonVariants({
-                variant: "ghost",
+                variant: "outline",
                 size: "icon",
               })}
             >
