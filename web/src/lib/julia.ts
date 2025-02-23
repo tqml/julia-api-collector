@@ -1,3 +1,5 @@
+import { z } from "zod";
+
 export const JuliaVersions = [
   "1.6",
   "1.7",
@@ -17,3 +19,6 @@ export const JuliaModules = [
 
 export type JuliaVersion = (typeof JuliaVersions)[number];
 export type JuliaModule = (typeof JuliaModules)[number];
+
+export const JuliaVersionSchema = z.enum(JuliaVersions);
+export const JuliaModuleSchema = z.enum(JuliaModules);
