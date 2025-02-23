@@ -17,7 +17,8 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "Julia Standard Library Diff Viewer",
-  description: "A viewer for the Julia Standard Library diffs, powered by Vercel created with v0, Next.js, and Tailwind CSS.",
+  description:
+    "A viewer for the Julia Standard Library diffs, powered by Vercel created with v0, Next.js, and Tailwind CSS.",
 };
 
 export default function RootLayout({
