@@ -14,3 +14,8 @@ updates:
     commit-message:
       include: scope
       prefix: "[npm]: "
+    groups:
+      patch:
+        update-types:
+          - patch
+          - minor
