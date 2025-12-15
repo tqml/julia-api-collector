@@ -31,7 +31,7 @@ jobs:
           version: ${{ matrix.julia-version }}
       - run: julia main.jl
         shell: bash
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v6
         with:
           name: api-${{ matrix.julia-version }}
           path: API/${{ matrix.julia-version }}
